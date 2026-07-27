@@ -123,6 +123,68 @@
     .biblio-empty-title { font-family: 'Manrope', sans-serif; font-size: 20px; font-weight: 800; color: var(--dark-deep); margin-bottom: 10px; }
     .biblio-empty-desc { font-size: 14.5px; color: var(--text-soft); max-width: 500px; margin: 0 auto; line-height: 1.6; }
 
+    /* ============ CONTENT BLOCKS · Autorité / Cure / Promo ============ */
+    .cblock { margin-bottom: 40px; }
+    .cblock-intro { font-size: 15.5px; color: var(--text); line-height: 1.7; font-style: italic; max-width: 720px; margin: 0 auto 28px; text-align: center; }
+    .cblock-intro strong { font-style: normal; color: var(--dark-deep); font-weight: 700; }
+    .cblock-insight { background: linear-gradient(135deg, #FFFBEB, #FFF6DC); border-left: 4px solid var(--gold); border-radius: 12px; padding: 16px 22px; margin-top: 24px; font-size: 14.5px; color: #6B4A00; line-height: 1.6; }
+    .cblock-insight strong { color: #4A3200; font-weight: 800; }
+
+    /* AUTORITÉ */
+    .auth-pill { display: block; text-align: center; margin: 0 auto 26px; background: var(--dark-deep); color: var(--white); font-family: 'Manrope',sans-serif; font-size: 12px; letter-spacing: 2px; font-weight: 800; text-transform: uppercase; padding: 12px 24px; border-radius: 999px; max-width: 520px; }
+    .auth-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 20px; }
+    .auth-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 22px 14px; text-align: center; transition: transform 0.2s; }
+    .auth-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(27,34,134,0.08); }
+    .auth-icon { font-size: 30px; margin-bottom: 10px; display: block; }
+    .auth-card-title { font-family: 'Manrope',sans-serif; font-size: 12.5px; font-weight: 800; color: var(--dark-deep); letter-spacing: 0.3px; line-height: 1.3; }
+    .benefit-badges { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 20px; }
+    .benefit-badge { border: 1px solid var(--border); border-radius: 14px; padding: 18px 16px; display: flex; gap: 12px; align-items: center; background: var(--white); }
+    .benefit-badge .icon { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; flex-shrink: 0; }
+    .benefit-badge.negative .icon { background: #FFE5E1; color: #D9342B; }
+    .benefit-badge.positive .icon { background: #E5F7EE; color: #2A9D6E; }
+    .benefit-badge .txt { font-family: 'Manrope',sans-serif; font-size: 13.5px; font-weight: 800; color: var(--dark-deep); line-height: 1.3; }
+    details.accordion { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 14px 20px; cursor: pointer; }
+    details.accordion summary { font-family: 'Manrope',sans-serif; font-size: 14px; font-weight: 800; color: var(--dark-deep); list-style: none; display: flex; align-items: center; gap: 8px; }
+    details.accordion summary::-webkit-details-marker { display: none; }
+    details.accordion summary::before { content: '▶'; font-size: 10px; color: var(--dark); transition: transform 0.2s; }
+    details.accordion[open] summary::before { transform: rotate(90deg); }
+    details.accordion .acc-body { margin-top: 12px; font-size: 14px; color: var(--text); line-height: 1.65; padding-top: 12px; border-top: 1px solid var(--border); }
+
+    /* CURE */
+    .protocol-title { text-align: center; font-family: 'Manrope',sans-serif; font-size: 20px; font-weight: 800; color: var(--dark-deep); letter-spacing: -0.3px; margin: 0 0 22px; }
+    .protocol-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 30px; }
+    .protocol-card { background: linear-gradient(135deg, var(--dark-pale), var(--white)); border: 1px solid #C9CFEA; border-radius: 14px; padding: 22px 16px; text-align: center; }
+    .protocol-icon { font-size: 32px; margin-bottom: 12px; display: block; }
+    .protocol-card-title { font-family: 'Manrope',sans-serif; font-size: 13.5px; font-weight: 800; color: var(--dark-deep); line-height: 1.35; }
+    .timeline { position: relative; margin: 30px 0 10px; padding: 20px 0 40px; }
+    .timeline::before { content: ''; position: absolute; top: 44px; left: 12%; right: 12%; height: 2px; background: var(--dark-pale); border-top: 2px dashed #C9CFEA; }
+    .timeline-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; position: relative; z-index: 2; }
+    .timeline-node { text-align: center; }
+    .timeline-dot { width: 24px; height: 24px; background: var(--dark); border-radius: 50%; margin: 0 auto 14px; box-shadow: 0 0 0 6px var(--off-white), 0 0 0 8px var(--dark-pale); }
+    .timeline-label { font-family: 'Manrope',sans-serif; font-size: 11.5px; font-weight: 800; color: var(--dark-deep); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 6px; }
+    .timeline-desc { font-size: 13px; color: var(--text-soft); line-height: 1.5; max-width: 180px; margin: 0 auto; }
+
+    /* PROMO */
+    .promo-card { display: grid; grid-template-columns: 220px 1fr; background: var(--white); border: 2px solid var(--dark); border-radius: 18px; overflow: hidden; box-shadow: 0 10px 30px rgba(27,34,134,0.10); margin: 10px auto 0; max-width: 780px; }
+    .promo-side { background: linear-gradient(135deg, #B99DE8, #D8C4F5); color: var(--white); padding: 30px 24px; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 8px; }
+    .promo-side-label { font-family: 'Manrope',sans-serif; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 800; color: #FFFFFF; opacity: 0.95; line-height: 1.35; }
+    .promo-side-brand { font-family: 'Manrope',sans-serif; font-size: 20px; font-weight: 800; color: var(--white); margin-top: 6px; }
+    .promo-body { padding: 26px 30px; }
+    .promo-desc { font-size: 13px; color: var(--text-soft); text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700; margin-bottom: 10px; }
+    .promo-prices { display: flex; align-items: baseline; gap: 14px; margin-bottom: 12px; }
+    .promo-old { font-size: 20px; color: var(--text-soft); text-decoration: line-through; font-weight: 600; }
+    .promo-new { font-size: 34px; color: var(--dark); font-weight: 800; letter-spacing: -0.8px; }
+    .promo-bonus { background: #FFF6DC; color: #7A5300; padding: 8px 14px; border-radius: 999px; display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 800; margin-bottom: 12px; }
+    .promo-tag { font-size: 12.5px; color: var(--text-soft); font-weight: 700; }
+    .promo-tag strong { color: var(--dark); font-weight: 800; }
+
+    @media (max-width: 800px) {
+      .auth-cards { grid-template-columns: repeat(2, 1fr); }
+      .benefit-badges, .protocol-cards, .timeline-row { grid-template-columns: 1fr; }
+      .timeline::before { display: none; }
+      .promo-card { grid-template-columns: 1fr; }
+    }
+
     /* BIBLIO GRID */
     .biblio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 36px; }
     .biblio-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; position: relative; }
@@ -202,25 +264,103 @@
   <main class="container">
     <section class="section" id="coming-soon">
 
-      <!-- PLACEHOLDER · WARNING -->
-      <div class="placeholder-card">
-        <span class="placeholder-label">⚠️ À personnaliser · Warning</span>
-        <div class="placeholder-title">Le piège que 90% des créateurs font</div>
-        <p class="placeholder-desc">Bloc rouge : décrire le piège spécifique Alpine White (ce que les créateurs font mal aujourd'hui) + reformuler la douleur client + la promesse.</p>
+      <!-- ============ BLOC 1 · AUTORITÉ ============ -->
+      <div class="cblock">
+        <div class="auth-pill">🇨🇭 Marque suisse · Co-développée avec des dentistes</div>
+
+        <p class="cblock-intro">
+          Alpine White est une marque suisse spécialisée en <strong>santé bucco-dentaire</strong>. Leur studio <strong>Zurich Stadelhofen</strong> (à côté de la gare) accueille des patients pour des blanchiments professionnels, soins dentaires et contrôles de santé bucco-dentaire — le tout réalisé par des <strong>hygiénistes dentaires diplômés</strong>. Le produit vendu en TikTok Shop est co-développé dans ce même cadre clinique.
+        </p>
+
+        <div class="auth-cards">
+          <div class="auth-card"><span class="auth-icon">🇨🇭</span><div class="auth-card-title">Marque suisse</div></div>
+          <div class="auth-card"><span class="auth-icon">🏥</span><div class="auth-card-title">Studio dentaire à Zurich</div></div>
+          <div class="auth-card"><span class="auth-icon">🦷</span><div class="auth-card-title">Hygiénistes diplômés</div></div>
+          <div class="auth-card"><span class="auth-icon">⚗️</span><div class="auth-card-title">Techno PAP brevetée</div></div>
+        </div>
+
+        <div class="benefit-badges">
+          <div class="benefit-badge negative"><div class="icon">✕</div><div class="txt">Sans peroxyde</div></div>
+          <div class="benefit-badge positive"><div class="icon">✓</div><div class="txt">Zéro usure de l'émail</div></div>
+          <div class="benefit-badge positive"><div class="icon">✓</div><div class="txt">Zéro sensibilité des gencives</div></div>
+        </div>
+
+        <details class="accordion">
+          <summary>C'est quoi la techno PAP ?</summary>
+          <div class="acc-body">
+            Le PAP (Phthalimidoperoxycaproic Acid) est un actif blanchissant nouvelle génération. Contrairement au peroxyde d'hydrogène (interdit à la vente grand public en Europe au-delà de 0,1 %), le PAP <strong>oxyde les taches sans déminéraliser l'émail et sans provoquer de sensibilité</strong>. C'est la même logique qu'un blanchiment cabinet, sans les effets secondaires.
+          </div>
+        </details>
+
+        <div class="cblock-insight">
+          💡 <strong>À dire dans tes vidéos :</strong> « Marque suisse, studio dentaire à Zurich, produit co-développé avec des hygiénistes dentaires. Sans peroxyde, techno PAP qui n'attaque pas l'émail. »
+        </div>
       </div>
 
-      <!-- PLACEHOLDER · PRODUIT -->
-      <div class="placeholder-card">
-        <span class="placeholder-label">📌 À personnaliser · Produit</span>
-        <div class="placeholder-title">Alpine White — [Nom du produit]</div>
-        <p class="placeholder-desc">Photo produit + description courte + tags (avantages clés). Ex : sans peroxyde, testé cliniquement, résultat en X jours, safe émail, etc.</p>
+      <!-- ============ BLOC 2 · CURE ============ -->
+      <div class="cblock">
+        <p class="cblock-intro">
+          Alpine White fonctionne comme un <strong>vrai blanchiment de cabinet</strong> : c'est une <strong>cure de 7 jours</strong>. Quand ton dentiste te propose un blanchiment professionnel, il ne le fait pas en une seule séance — il te remet un kit à utiliser à la maison sur plusieurs jours. Alpine White, c'est exactement ce même principe, accessible directement en TikTok Shop.
+        </p>
+
+        <div class="protocol-title">Ce n'est pas un tour de magie. C'est une cure.</div>
+
+        <div class="protocol-cards">
+          <div class="protocol-card"><span class="protocol-icon">🦷</span><div class="protocol-card-title">Un vrai protocole dentiste</div></div>
+          <div class="protocol-card"><span class="protocol-icon">🏠</span><div class="protocol-card-title">À faire chez toi</div></div>
+          <div class="protocol-card"><span class="protocol-icon">⏱</span><div class="protocol-card-title">7 jours pour un résultat durable</div></div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-row">
+            <div class="timeline-node">
+              <div class="timeline-dot"></div>
+              <div class="timeline-label">Jour 1</div>
+              <div class="timeline-desc">Résultat immédiat (contraste visible)</div>
+            </div>
+            <div class="timeline-node">
+              <div class="timeline-dot"></div>
+              <div class="timeline-label">Jour 3</div>
+              <div class="timeline-desc">Progression visible (nuances plus claires)</div>
+            </div>
+            <div class="timeline-node">
+              <div class="timeline-dot"></div>
+              <div class="timeline-label">Jour 7</div>
+              <div class="timeline-desc">Résultat final &amp; durable</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cblock-insight">
+          💡 <strong>L'analogie qui vend :</strong> « C'est comme le kit que mon dentiste m'a donné pour un blanchiment — sauf que là, pas besoin de rendez-vous. » Dis exactement ça dans ta vidéo.
+        </div>
       </div>
 
-      <!-- PLACEHOLDER · MÉCANISME -->
-      <div class="placeholder-card">
-        <span class="placeholder-label">🧬 À personnaliser · Mécanisme</span>
-        <div class="placeholder-title">Le mécanisme en 4 étapes</div>
-        <p class="placeholder-desc">Vidéo démo à gauche + 4 étapes de la routine à droite (application gel, lumière LED, durée, résultat visible). Le point à filmer que personne ne montre.</p>
+      <!-- ============ BLOC 3 · PROMO EXCLUSIVE TIKTOK SHOP ============ -->
+      <div class="cblock">
+        <p class="cblock-intro">
+          L'offre exclusive TikTok Shop est <strong>le meilleur prix jamais fait</strong> sur ce pack. Réservée aux affiliés — le site officiel n'a pas ce tarif.
+        </p>
+
+        <div class="promo-card">
+          <div class="promo-side">
+            <div class="promo-side-label">🎁 Offre<br>exclusive</div>
+            <div class="promo-side-brand">TikTok Shop</div>
+          </div>
+          <div class="promo-body">
+            <div class="promo-desc">1 pack · 14 bandes (cure 7 jours)</div>
+            <div class="promo-prices">
+              <span class="promo-old">29,90 €</span>
+              <span class="promo-new">16,99 €</span>
+            </div>
+            <div class="promo-bonus">✚ Bâtonnets interdentaires OFFERTS</div>
+            <div class="promo-tag"><strong>-43 %</strong> · exclusivité affiliés TikTok Shop</div>
+          </div>
+        </div>
+
+        <div class="cblock-insight">
+          💡 <strong>Comment la placer dans ta vidéo :</strong> montre le prix barré en overlay 3-5 s + mentionne le cadeau (bâtonnets interdentaires) + rappelle « exclu TikTok Shop, tu ne trouveras pas ce prix ailleurs ».
+        </div>
       </div>
 
     </section>
