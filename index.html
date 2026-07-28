@@ -215,13 +215,22 @@
     .biblio-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(27,34,134,0.14); }
     .biblio-thumb { width: 100%; aspect-ratio: 9 / 16; object-fit: cover; display: block; background: var(--dark-pale); }
     .biblio-card-num { position: absolute; top: 10px; left: 10px; background: rgba(15,24,99,0.85); color: var(--white); font-family: 'Manrope', sans-serif; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 999px; }
-    /* Lightbox */
-    .lib-modal { display: none; position: fixed; inset: 0; background: rgba(15,24,99,0.85); z-index: 999; padding: 20px; align-items: center; justify-content: center; }
-    .lib-modal.open { display: flex; }
-    .lib-modal-video-wrap { background: #000; border-radius: 14px; overflow: hidden; max-width: 420px; width: 100%; position: relative; }
-    .lib-modal-video-wrap video { width: 100%; aspect-ratio: 9/16; object-fit: cover; display: block; }
-    .lib-modal-close { position: absolute; top: -14px; right: -14px; background: var(--white); border: 1px solid var(--border); border-radius: 50%; width: 40px; height: 40px; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; z-index: 2; box-shadow: 0 6px 14px rgba(0,0,0,0.3); }
-    @media (max-width: 900px) { .biblio-grid { grid-template-columns: repeat(3, 1fr); } }
+    /* Lightbox · vidéo + analyse */
+    .lib-modal { display: none; position: fixed; inset: 0; background: rgba(15,24,99,0.75); z-index: 999; padding: 30px 20px; overflow-y: auto; }
+    .lib-modal-inner { background: var(--white); max-width: 1000px; margin: 0 auto; border-radius: 18px; overflow: hidden; display: grid; grid-template-columns: 340px 1fr; position: relative; }
+    .lib-modal-video-wrap { background: #000; display: flex; align-items: center; }
+    .lib-modal-video-wrap video { width: 100%; aspect-ratio: 9 / 16; object-fit: cover; }
+    .lib-modal-body { padding: 30px 32px; overflow-y: auto; max-height: 85vh; }
+    .lib-modal-close { position: absolute; top: 12px; right: 12px; background: var(--white); border: 1px solid var(--border); border-radius: 50%; width: 36px; height: 36px; cursor: pointer; font-size: 18px; display: flex; align-items: center; justify-content: center; z-index: 2; }
+    .lib-modal-tag { display: inline-block; background: var(--dark-pale); color: var(--dark-deep); font-family: 'Manrope', sans-serif; font-size: 10.5px; letter-spacing: 1.4px; text-transform: uppercase; font-weight: 800; padding: 5px 11px; border-radius: 999px; margin-right: 6px; margin-bottom: 8px; }
+    .lib-modal-title { font-family: 'Manrope', sans-serif; font-size: 22px; font-weight: 800; color: var(--dark-deep); margin: 8px 0 20px; line-height: 1.2; letter-spacing: -0.3px; }
+    .lib-block { background: var(--off-white); border: 1px solid var(--border); border-left: 4px solid var(--dark); border-radius: 10px; padding: 14px 18px; margin-bottom: 12px; }
+    .lib-block-label { font-family: 'Manrope', sans-serif; font-size: 10.5px; letter-spacing: 1.4px; text-transform: uppercase; font-weight: 800; color: var(--dark-deep); margin-bottom: 6px; }
+    .lib-block-text { font-size: 14px; color: var(--text); line-height: 1.6; }
+    .lib-block-text strong { color: var(--dark-deep); }
+    .lib-block.notes { border-left-color: var(--gold); background: linear-gradient(135deg, #FFFBEB, var(--white)); }
+    .lib-block.notes .lib-block-label { color: #7A5300; }
+    @media (max-width: 900px) { .biblio-grid { grid-template-columns: repeat(3, 1fr); } .lib-modal-inner { grid-template-columns: 1fr; } .lib-modal-video-wrap video { max-height: 60vh; aspect-ratio: auto; } }
     @media (max-width: 480px) { .biblio-grid { grid-template-columns: repeat(2, 1fr); } }
 
     /* FOOTER */
@@ -328,7 +337,7 @@
       <div class="biblio-header">
         <div class="biblio-eyebrow">📚 Bibliothèque · Vidéos référence</div>
         <h2 class="biblio-title">6 vidéos qui cartonnent sur le blanchiment dentaire</h2>
-        <p class="biblio-intro">Toutes marques confondues — inspire-toi des formats qui vendent vraiment ce type de produit. Clique sur une vignette pour voir la vidéo en entier.</p>
+        <p class="biblio-intro">Toutes marques confondues — inspire-toi des formats qui vendent vraiment ce type de produit. Clique sur une vignette pour voir la vidéo <strong>+ analyse hook / format / CTA + traduction FR</strong>.</p>
       </div>
       <div class="biblio-grid">
         <div class="biblio-card" data-vid="1"><img class="biblio-thumb" src="lib1.jpg" alt="Vidéo 1"><div class="biblio-card-num">#1</div></div>
@@ -341,23 +350,104 @@
     </section>
   </main>
 
-  <!-- LIGHTBOX -->
+  <!-- LIGHTBOX · vidéo + analyse -->
   <div class="lib-modal" id="lib-modal">
-    <div class="lib-modal-video-wrap">
+    <div class="lib-modal-inner">
       <button class="lib-modal-close" onclick="closeLibModal()">×</button>
-      <video id="lib-modal-video" controls playsinline preload="metadata"></video>
+      <div class="lib-modal-video-wrap">
+        <video id="lib-modal-video" controls playsinline preload="metadata"></video>
+      </div>
+      <div class="lib-modal-body">
+        <span class="lib-modal-tag" id="lib-num">#1</span>
+        <span class="lib-modal-tag" id="lib-brand">brand</span>
+        <h3 class="lib-modal-title" id="lib-title">Titre</h3>
+
+        <div class="lib-block"><div class="lib-block-label">🎣 Hook</div><div class="lib-block-text" id="lib-hook">—</div></div>
+        <div class="lib-block"><div class="lib-block-label">🎬 Format</div><div class="lib-block-text" id="lib-format">—</div></div>
+        <div class="lib-block"><div class="lib-block-label">📣 CTA</div><div class="lib-block-text" id="lib-cta">—</div></div>
+        <div class="lib-block"><div class="lib-block-label">📝 Transcript original (EN)</div><div class="lib-block-text" id="lib-orig">—</div></div>
+        <div class="lib-block"><div class="lib-block-label">🇫🇷 Traduction FR</div><div class="lib-block-text" id="lib-fr">—</div></div>
+        <div class="lib-block notes"><div class="lib-block-label">💡 Notes pour Alpine White</div><div class="lib-block-text" id="lib-notes">—</div></div>
+      </div>
     </div>
   </div>
 
   <script>
+    window.__LIB_DATA__ = {
+      "1": {
+        "brand": "Test hyped TikTok · avant/après",
+        "original": "I know you can see this difference, look at this. Today we're trying the Dr. Dent whitening strips. I've seen them all over TikTok, they have a lot of good reviews, so let's see what the hype is about. Honestly, if they don't work — well, whitening strips are the biggest scam ever. I don't care because they're really expensive. I'm gonna put them both on top so you can see the difference. OK, they feel weird — now we wait 30 minutes. It's been about 30 minutes, time to take them off, let's see — oh my god look at that, my teeth look so much whiter. I'll drop the link below if you want to try them.",
+        "traduction_fr": "Je sais que vous voyez cette différence, regardez. Aujourd'hui on teste les bandes blanchissantes Dr. Dent. Je les ai vues partout sur TikTok, elles ont plein de bonnes reviews, donc on va voir ce que vaut le hype. Franchement, si elles ne marchent pas — les bandes blanchissantes sont la plus grosse arnaque qui soit. Je les mets toutes sur mes dents du haut pour que vous voyiez la différence. OK, on attend 30 minutes. Ça fait environ 30 minutes, on les enlève, voyons — oh mon dieu regardez ça, mes dents sont vraiment plus blanches ! Je laisse le lien en bas si vous voulez essayer.",
+        "hook": "« Je sais que vous voyez cette différence, regardez ça » — challenge visuel direct (0-2s) qui aimante l'œil",
+        "format": "Test hype TikTok · Application 30 min + reveal après/avant avec surprise sincère",
+        "cta": "« Je laisse le lien en bas si vous voulez essayer » — CTA soft avec lien affilié",
+        "notes": "Structure ULTRA reproductible en 3 temps : (1) hook « Je sais que vous voyez la différence » ; (2) application + countdown 30 min ; (3) reveal avec réaction sincère. ⚠️ NE PROMET PAS un résultat définitif en 1 fois — pour Alpine White dis « premier résultat visible, mais le vrai résultat durable c'est la cure de 7 jours »."
+      },
+      "2": {
+        "brand": "Réaction mère · découverte du résultat",
+        "original": "Oh my god, oh my god mom, why are your teeth actually white? It's just to make a difference. Oh my god, you need whitening in your bottle! People said that Dr. Dent stuff is supposed to work in one session, and I think it actually worked in one session — like way better than I thought. And they're enamel-safe, so they should be good for people with sensitive teeth. I'll drop a link below if you want to try them.",
+        "traduction_fr": "Oh mon dieu, oh mon dieu maman, pourquoi tes dents sont vraiment blanches ?! C'est juste pour faire la différence. Oh mon dieu, il t'en faut aussi ! Les gens disent que ces bandes marchent en une seule session — et je crois que c'est vrai, bien mieux que je pensais. En plus elles sont safe pour l'émail, donc parfait pour ceux qui ont les dents sensibles. Je laisse le lien en bas si vous voulez essayer.",
+        "hook": "« Oh mon dieu maman, pourquoi tes dents sont VRAIMENT blanches ?! » — réaction spontanée d'un TÉMOIN (0-3s)",
+        "format": "Réaction témoin (mère/fille) · Découverte du résultat en direct par un tiers",
+        "cta": "« Je laisse le lien en bas si vous voulez essayer »",
+        "notes": "Format ULTRA persuasif — la réaction d'un TIERS vend 10x plus qu'un test solo. ⚠️ La créatrice dit « ça marche en 1 session » — pour Alpine White remplace par : « c'est le résultat immédiat de la cure de 7 jours, le vrai résultat durable arrive après 7 applications ». Reproduis avec ta mère/sœur/pote qui découvre ton sourire."
+      },
+      "3": {
+        "brand": "Test rapide TikTok · format court",
+        "original": "So I tried this TikTok thing but I had to stop because it's been more than 30 minutes, but let's see — this is crazy oh my god you see the difference like that, it looks nasty. Oh my god it's amazing! I have to hit the link.",
+        "traduction_fr": "J'ai testé ce truc TikTok mais j'ai dû arrêter parce que ça faisait plus de 30 minutes — bref, regardez, c'est fou. Oh mon dieu vous voyez la différence, c'est ouf ! Je dois cliquer sur le lien.",
+        "hook": "« J'ai testé ce truc TikTok » — hook casual curieux (0-2s), tone conversationnel",
+        "format": "Test rapide + reveal court · Format ultra condensé (30-45s max)",
+        "cta": "« Je dois cliquer sur le lien » — CTA implicite qui pointe vers la boutique",
+        "notes": "Le format le plus court et efficace de la biblio. Contenu ULTRA condensé : hook + application + reveal en moins de 45s. ⚠️ Évite « c'est dégueulasse » — pour Alpine White reste positif : « regardez la différence, mes dents brillent »."
+      },
+      "4": {
+        "brand": "Éducation safety · sans peroxyde",
+        "original": "If your teeth are yellow like this, you just grab these whitening strips. It looks kinda crazy. You have to be super careful with whitening strips because they can erode your enamel and zap your gums. So I got these ones because they're enamel-safe and they won't hurt your gums. It's been 30 minutes, my gums don't feel anything, so let's see if these work. Oh my god, oh my god. I literally have veneers, what is this?",
+        "traduction_fr": "Si tes dents sont jaunes comme ça, tu prends juste ces bandes blanchissantes. Ça a l'air un peu fou. Tu dois faire super attention avec les bandes blanchissantes parce qu'elles peuvent abîmer ton émail et attaquer tes gencives. Donc j'ai pris celles-ci parce qu'elles sont safe pour l'émail et ne feront pas mal aux gencives. Ça fait 30 minutes, mes gencives ne sentent rien, donc voyons si elles marchent. Oh mon dieu, oh mon dieu. J'ai littéralement des facettes, c'est quoi ça ?!",
+        "hook": "« Si tes dents sont jaunes comme ça » — hook problème/solution direct (0-3s)",
+        "format": "Éducation safety + démo · Focus sur ce qui DIFFÉRENCIE de la concurrence",
+        "cta": "Aucun CTA verbal — l'argument safety fait vendre seul",
+        "notes": "⭐ EXCELLENT angle pour Alpine White. Structure gagnante : (1) douleur « les strips normaux abîment émail/gencives » ; (2) solution « ceux-ci sont safe émail & gencives, sans peroxyde, techno PAP » ; (3) démo 30 min sans sensibilité ; (4) reveal. Reproduis EXACTEMENT ce format — c'est l'argument #1 d'Alpine White vs la concurrence."
+      },
+      "5": {
+        "brand": "Duo mère × fille · storytelling drôle",
+        "original": "Oh my god I never noticed that — you've been smoking too much haha. Yeah you should stop smoking, OK let's try this. OK let's wait 30 minutes so we're ready. OK I think it's been 30 minutes. Oh my god you're so cute I'm gonna stop teasing you. Mom what? Your teeth — can you see? Oh what does it look like, oh my god mom what are you doing? I don't think you understand, come look in the mirror. OK oh my god mom, oh my god I have a hard time with my teeth. Wow OK, my mom is breaking her teeth because apparently people said it doesn't work after you break your teeth so we'll see if it's true.",
+        "traduction_fr": "Oh mon dieu j'avais jamais remarqué — t'as trop fumé haha. Ouais tu devrais arrêter de fumer, OK on essaie ça. On attend 30 min pour être prêtes. OK je crois que ça fait 30 min. Oh mon dieu t'es trop mignonne, j'arrête de t'embêter. Maman quoi ? Tes dents — tu vois ? Oh mon dieu maman qu'est-ce que tu fais ? Viens te regarder dans le miroir. Oh mon dieu maman, oh j'ai du mal avec mes dents. Ma mère se démolit les dents parce qu'apparemment les gens disent que ça ne marche pas si tu as les dents abîmées, donc on va voir si c'est vrai.",
+        "hook": "« Oh mon dieu j'avais jamais remarqué — t'as trop fumé ! » — hook drôle/relatable (0-4s)",
+        "format": "Duo mère/fille · Storytelling humoristique + reveal partagé",
+        "cta": "Aucun CTA direct — le duo authentique vend seul",
+        "notes": "Format duo = engagement X10. La dynamique mère/fille est TikTok gold. Pour Alpine White : fais le test AVEC ta mère/sœur, montre les 2 sourires avant/après. ⚠️ Évite le vocabulaire « briser/démolir les dents » — remplace par « on teste ensemble la cure de 7 jours »."
+      },
+      "6": {
+        "brand": "Haul + tutorial complet · long format",
+        "original": "Oh look at my teeth — you guys always ask me what I do to make my teeth so white. I just got a new pack in the mail today, so I'm gonna show you exactly what I do to make my teeth super white, and I'm gonna show you on camera. OK I think my teeth are at a 4, yeah OK so my teeth are at a 4, we'll see once I finish doing this. There are 42 sachets baby, a lot. They smell like tea. I cut them in half so it's just better, trust me, I cut them in half so I use one strip at a time. OK peel and stick. OK and now instead of just 42, I actually have 84 now. We wait — Alexa set a 30 minute timer. As you can hear my timer going off — Alexa cancel timer. Let's just take it off. Let's do the top first. Oh my god, it's like — do you see this? Look at that, let's see what color we are now, easily easily a two. So y'all can see for yourself, go buy them. If you want white teeth, it's that simple.",
+        "traduction_fr": "Regardez mes dents — vous me demandez tout le temps ce que je fais pour les blanchir. Je viens de recevoir un nouveau pack aujourd'hui, donc je vais vous montrer exactement ce que je fais pour avoir les dents super blanches, en direct devant la caméra. OK je pense que mes dents sont au niveau 4, oui donc au niveau 4, on verra à la fin. Il y a 42 sachets bébé, énormément. Ils sentent le thé. Je les coupe en deux — croyez-moi c'est mieux — donc j'utilise une demi-bande à la fois. Peel et stick. Au lieu de 42, j'en ai maintenant 84. Alexa mets un timer de 30 minutes. Alexa cancel timer. On les enlève. On fait le haut d'abord. Oh mon dieu — vous voyez ça ?! Regardez, on est facilement au niveau 2 maintenant. Vous pouvez voir par vous-mêmes, allez les acheter. Si vous voulez les dents blanches, c'est aussi simple.",
+        "hook": "« Vous me demandez toujours ce que je fais pour avoir les dents si blanches » — hook social proof (0-4s), positionne la créatrice comme l'experte",
+        "format": "Haul + tutorial complet · Long format (60-90s) avec démo détaillée + reveal",
+        "cta": "« Go buy them — c'est aussi simple » — CTA direct achat",
+        "notes": "Format LONG hyper convertisseur quand tu as déjà une audience qui te demande « quel produit tu utilises ? ». Structure pour Alpine White : (1) hook « on me demande toujours » ; (2) reveal pack Alpine White ; (3) démo application ; (4) résultat après 30 min ; (5) CTA « lien en bas ». ⚠️ NE COUPE PAS les bandes en deux — pour Alpine White respecte le protocole : 14 bandes = cure complète de 7 jours."
+      }
+    };
+
     document.querySelectorAll('.biblio-card').forEach(card => {
       card.addEventListener('click', () => {
         const n = card.dataset.vid;
+        const d = window.__LIB_DATA__[n];
+        if (!d) return;
+        document.getElementById('lib-num').textContent = '#' + n;
+        document.getElementById('lib-brand').textContent = d.brand;
+        document.getElementById('lib-title').textContent = d.brand;
+        document.getElementById('lib-hook').textContent = d.hook;
+        document.getElementById('lib-format').textContent = d.format;
+        document.getElementById('lib-cta').textContent = d.cta;
+        document.getElementById('lib-orig').textContent = d.original;
+        document.getElementById('lib-fr').textContent = d.traduction_fr;
+        document.getElementById('lib-notes').textContent = d.notes;
         const vid = document.getElementById('lib-modal-video');
         vid.src = 'lib' + n + '.mp4';
         vid.load();
-        vid.play();
-        document.getElementById('lib-modal').classList.add('open');
+        document.getElementById('lib-modal').style.display = 'block';
         document.body.style.overflow = 'hidden';
       });
     });
@@ -365,7 +455,7 @@
       const vid = document.getElementById('lib-modal-video');
       vid.pause();
       vid.src = '';
-      document.getElementById('lib-modal').classList.remove('open');
+      document.getElementById('lib-modal').style.display = 'none';
       document.body.style.overflow = '';
     }
     document.getElementById('lib-modal').addEventListener('click', e => {
