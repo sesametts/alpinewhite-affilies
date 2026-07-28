@@ -210,7 +210,7 @@
     }
 
     /* BIBLIO GRID */
-    .biblio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 36px; }
+    .biblio-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-top: 36px; max-width: 780px; margin-left: auto; margin-right: auto; }
     .biblio-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; position: relative; }
     .biblio-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(27,34,134,0.14); }
     .biblio-thumb { width: 100%; aspect-ratio: 9 / 16; object-fit: cover; display: block; background: var(--dark-pale); }
@@ -221,8 +221,8 @@
     .lib-modal-video-wrap { background: #000; border-radius: 14px; overflow: hidden; max-width: 420px; width: 100%; position: relative; }
     .lib-modal-video-wrap video { width: 100%; aspect-ratio: 9/16; object-fit: cover; display: block; }
     .lib-modal-close { position: absolute; top: -14px; right: -14px; background: var(--white); border: 1px solid var(--border); border-radius: 50%; width: 40px; height: 40px; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; z-index: 2; box-shadow: 0 6px 14px rgba(0,0,0,0.3); }
-    @media (max-width: 900px) { .biblio-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 480px) { .biblio-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 900px) { .biblio-grid { grid-template-columns: repeat(3, 1fr); max-width: 100%; } }
+    @media (max-width: 480px) { .biblio-grid { grid-template-columns: repeat(2, 1fr); } }
 
     /* FOOTER */
     .footer { background: var(--dark-deep); color: rgba(255,255,255,0.7); padding: 40px 32px; text-align: center; margin-top: 100px; font-size: 13px; }
@@ -249,28 +249,28 @@
     <p class="hero-subtitle">Un programme piloté par Sesame pour les créateurs Alpine White. Chaque semaine, on décrypte tout ce qui fait vendre sur TikTok Shop — vidéos, hooks et formats à reproduire dans ta vitrine.</p>
 
     <div class="hero-features">
-      <a class="feature" href="#coming-soon">
+      <a class="feature" href="#bibliotheque">
         <div class="feature-icon">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M10 9l5 3-5 3V9z" fill="currentColor" stroke="none"/></svg>
         </div>
         <div class="feature-title">Analyse de vidéos</div>
         <div class="feature-desc">Les vidéos qui performent, décortiquées : transcript, contexte et ce qui les fait vendre.</div>
       </a>
-      <a class="feature" href="#coming-soon">
+      <a class="feature" href="#bibliotheque">
         <div class="feature-icon">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v6M6 9c0 3.3 2.7 6 6 6s6-2.7 6-6"/><path d="M6 15l6 6 6-6"/></svg>
         </div>
         <div class="feature-title">Hooks à reproduire</div>
         <div class="feature-desc">Les accroches qui captent l'attention dans les 3 premières secondes — à copier dans tes vidéos.</div>
       </a>
-      <a class="feature" href="#coming-soon">
+      <a class="feature" href="#bibliotheque">
         <div class="feature-icon">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="12,2 15,9 22,9 17,14 19,21 12,17 5,21 7,14 2,9 9,9"/></svg>
         </div>
         <div class="feature-title">Formats</div>
         <div class="feature-desc">Les structures qui convertissent cette semaine — à filmer dès aujourd'hui.</div>
       </a>
-      <a class="feature" href="#coming-soon">
+      <a class="feature" href="#bibliotheque">
         <div class="feature-icon">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v16H4z"/><path d="M4 8h16M8 4v16"/></svg>
         </div>
@@ -280,114 +280,12 @@
     </div>
 
     <nav class="pill-nav">
-      <a class="pill" href="#coming-soon"><span class="pill-icon">🚀</span> Commencez par ici <span style="margin-left:6px;">→</span></a>
+      <a class="pill" href="#bibliotheque"><span class="pill-icon">🚀</span> Commencez par ici <span style="margin-left:6px;">→</span></a>
       <a class="pill gold" href="#bibliotheque"><span class="pill-icon">📚</span> Bibliothèque <span style="margin-left:6px;">→</span></a>
     </nav>
   </section>
 
   <main class="container">
-    <section class="section" id="coming-soon">
-
-      <!-- ============ WARNING · LE PIÈGE ============ -->
-      <div class="warning-card">
-        <div class="warning-header">
-          <div class="warning-icon">⚠</div>
-          <div>
-            <div class="warning-label">Message important pour les créateurs</div>
-            <div class="warning-title">Le piège que 90% des créateurs Alpine White font</div>
-          </div>
-        </div>
-        <div class="warning-body">
-          <p>Ils promettent un <strong>résultat immédiat en une seule utilisation</strong> — et perdent toute crédibilité.</p>
-          <p>Alpine White n'est pas un one-shot. C'est une <strong>cure de 7 jours</strong>, comme un vrai blanchiment de cabinet dentaire. Résultat visible dès le premier jour (contraste), résultat final après 7 jours.</p>
-          <p>Si tu ne dis pas « cure de 7 jours », ta vidéo <strong>ne convertit pas</strong>.</p>
-        </div>
-      </div>
-
-      <!-- ============ PRODUIT ============ -->
-      <div class="product-reminder">
-        <img src="product.png" alt="Alpine White — Whitening Strips" onerror="this.style.display='none'">
-        <div>
-          <div class="product-reminder-label">📌 Le produit</div>
-          <div class="product-reminder-name">Alpine White — <span>Whitening Strips 7 jours.</span></div>
-          <p class="product-reminder-desc">Une cure de blanchiment dentaire suisse — <strong>14 bandes pour 7 jours de traitement</strong>. Co-développée avec des hygiénistes dentaires du studio Zurich Stadelhofen, sans peroxyde, avec la techno PAP qui n'attaque ni l'émail ni les gencives.</p>
-          <div class="product-tags">
-            <span class="product-tag">🇨🇭 Marque suisse</span>
-            <span class="product-tag">⏱ Cure 7 jours</span>
-            <span class="product-tag">🦷 Sans peroxyde</span>
-            <span class="product-tag">⚗️ Techno PAP</span>
-            <span class="product-tag">😊 Safe émail & gencives</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- ============ AUTORITÉ (compact) ============ -->
-      <div class="cblock">
-        <div class="auth-pill">🇨🇭 Marque suisse · Co-développée avec des dentistes</div>
-        <div class="auth-cards">
-          <div class="auth-card"><span class="auth-icon">🏥</span><div class="auth-card-title">Studio dentaire à Zurich</div></div>
-          <div class="auth-card"><span class="auth-icon">🦷</span><div class="auth-card-title">Hygiénistes diplômés</div></div>
-          <div class="auth-card"><span class="auth-icon">⚗️</span><div class="auth-card-title">Techno PAP brevetée</div></div>
-        </div>
-        <details class="accordion">
-          <summary>C'est quoi la techno PAP ?</summary>
-          <div class="acc-body">
-            Le PAP (Phthalimidoperoxycaproic Acid) est un actif blanchissant nouvelle génération. Contrairement au peroxyde d'hydrogène (interdit à la vente grand public en Europe au-delà de 0,1 %), le PAP <strong>oxyde les taches sans déminéraliser l'émail et sans provoquer de sensibilité</strong>. Même logique qu'un blanchiment cabinet, sans les effets secondaires.
-          </div>
-        </details>
-      </div>
-
-      <!-- ============ CURE (timeline seule) ============ -->
-      <div class="cblock">
-        <div class="protocol-title">La cure en 7 jours — comme un vrai blanchiment cabinet.</div>
-        <div class="timeline">
-          <div class="timeline-row">
-            <div class="timeline-node">
-              <div class="timeline-dot"></div>
-              <div class="timeline-label">Jour 1</div>
-              <div class="timeline-desc">Résultat immédiat (contraste visible)</div>
-            </div>
-            <div class="timeline-node">
-              <div class="timeline-dot"></div>
-              <div class="timeline-label">Jour 3</div>
-              <div class="timeline-desc">Progression (nuances plus claires)</div>
-            </div>
-            <div class="timeline-node">
-              <div class="timeline-dot"></div>
-              <div class="timeline-label">Jour 7</div>
-              <div class="timeline-desc">Résultat final &amp; durable</div>
-            </div>
-          </div>
-        </div>
-        <div class="cblock-insight">
-          💡 <strong>L'analogie qui vend :</strong> « C'est comme le kit que mon dentiste m'a donné pour un blanchiment — sauf que là, pas besoin de rendez-vous. »
-        </div>
-      </div>
-
-      <!-- ============ PROMO EXCLUSIVE TIKTOK SHOP ============ -->
-      <div class="cblock">
-        <div class="promo-card">
-          <div class="promo-side">
-            <div class="promo-side-label">🎁 Offre<br>exclusive</div>
-            <div class="promo-side-brand">TikTok Shop</div>
-          </div>
-          <div class="promo-body">
-            <div class="promo-desc">1 pack · 14 bandes (cure 7 jours)</div>
-            <div class="promo-prices">
-              <span class="promo-old">29,90 €</span>
-              <span class="promo-new">16,99 €</span>
-            </div>
-            <div class="promo-bonus">✚ Bâtonnets interdentaires OFFERTS</div>
-            <div class="promo-tag"><strong>-43 %</strong> · exclusivité affiliés TikTok Shop</div>
-          </div>
-        </div>
-        <div class="cblock-insight">
-          💡 <strong>Comment la placer dans ta vidéo :</strong> montre le prix barré en overlay 3-5 s + mentionne le cadeau (bâtonnets interdentaires) + rappelle « exclu TikTok Shop, tu ne trouveras pas ce prix ailleurs ».
-        </div>
-      </div>
-
-    </section>
-
     <!-- BIBLIOTHÈQUE -->
     <section class="biblio-section" id="bibliotheque">
       <div class="biblio-header">
