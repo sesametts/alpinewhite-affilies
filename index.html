@@ -40,11 +40,11 @@
     .site-tag { color: rgba(255,255,255,0.65); font-family: 'Manrope', sans-serif; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; }
 
     /* HERO */
-    .hero { background: var(--off-white); padding: 80px 24px 30px; text-align: center; }
+    .hero { background: var(--off-white); padding: 60px 24px 20px; text-align: center; }
     .hero-eyebrow { color: var(--dark); font-family: 'Manrope', sans-serif; font-size: 12px; letter-spacing: 3.2px; text-transform: uppercase; font-weight: 800; margin-bottom: 32px; }
     .hero-title { font-family: 'Manrope', sans-serif; font-size: 62px; font-weight: 800; line-height: 1.05; color: var(--dark-deep); max-width: 900px; margin: 0 auto 26px; letter-spacing: -1.5px; }
     .hero-title em { font-style: normal; color: var(--gold); }
-    .hero-subtitle { font-size: 17px; color: var(--text-soft); max-width: 640px; margin: 0 auto 70px; line-height: 1.65; }
+    .hero-subtitle { font-size: 17px; color: var(--text-soft); max-width: 640px; margin: 0 auto 40px; line-height: 1.65; }
 
     /* FEATURES */
     .hero-features { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; max-width: 1080px; margin: 0 auto; padding: 0 20px; }
@@ -55,7 +55,7 @@
     .feature-desc { font-size: 14px; color: var(--text-soft); line-height: 1.55; max-width: 220px; margin: 0 auto; }
 
     /* PILL NAV */
-    .pill-nav { display: flex; gap: 14px; justify-content: center; align-items: center; padding: 60px 24px 20px; flex-wrap: wrap; }
+    .pill-nav { display: flex; gap: 14px; justify-content: center; align-items: center; padding: 40px 24px 10px; flex-wrap: wrap; }
     .pill { display: inline-flex; align-items: center; gap: 10px; background: var(--dark-deep); color: var(--white); padding: 10px 22px 10px 12px; border-radius: 999px; font-family: 'Manrope', sans-serif; font-size: 13px; font-weight: 800; letter-spacing: 1.4px; text-decoration: none; text-transform: uppercase; transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; border: none; }
     .pill:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(27,34,134,0.25); }
     .pill.gold { background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: #3A2705; }
@@ -65,7 +65,7 @@
 
     /* CONTAINER */
     .container { max-width: 1080px; margin: 0 auto; padding: 0 32px; }
-    .section { padding: 30px 0 20px; }
+    .section { padding: 10px 0 10px; }
 
     /* PLACEHOLDER CARDS */
     .placeholder-card {
@@ -106,7 +106,7 @@
     }
 
     /* BIBLIOTHÈQUE */
-    .biblio-section { padding: 60px 0 20px; }
+    .biblio-section { padding: 24px 0 20px; }
     .biblio-header { text-align: center; margin-bottom: 36px; }
     .biblio-eyebrow { display: inline-block; background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: #3A2705; font-family: 'Manrope', sans-serif; font-size: 11px; letter-spacing: 2.4px; text-transform: uppercase; font-weight: 800; padding: 7px 16px; border-radius: 999px; margin-bottom: 18px; }
     .biblio-title { font-family: 'Manrope', sans-serif; font-size: 32px; font-weight: 800; color: var(--dark-deep); line-height: 1.15; letter-spacing: -0.6px; margin-bottom: 12px; }
@@ -124,7 +124,7 @@
     .biblio-empty-desc { font-size: 14.5px; color: var(--text-soft); max-width: 500px; margin: 0 auto; line-height: 1.6; }
 
     /* ============ WARNING CARD · Le piège ============ */
-    .warning-card { background: linear-gradient(135deg, #FFF5F5 0%, #FFEBE8 100%); border: 1.5px solid #FFB4A8; border-left: 6px solid #D9342B; border-radius: 16px; padding: 32px 36px; margin-bottom: 30px; box-shadow: 0 6px 22px rgba(217,52,43,0.10); position: relative; overflow: hidden; }
+    .warning-card { background: linear-gradient(135deg, #FFF5F5 0%, #FFEBE8 100%); border: 1.5px solid #FFB4A8; border-left: 6px solid #D9342B; border-radius: 16px; padding: 32px 36px; margin-bottom: 12px; box-shadow: 0 6px 22px rgba(217,52,43,0.10); position: relative; overflow: hidden; }
     .warning-card::before { content:''; position:absolute; top:0; right:0; width:220px; height:220px; background: radial-gradient(circle, rgba(217,52,43,0.08), transparent 65%); pointer-events:none; }
     .warning-header { display: flex; gap: 20px; align-items: center; margin-bottom: 18px; }
     .warning-icon { background: #D9342B; color: var(--white); width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 26px; font-weight: 800; flex-shrink: 0; box-shadow: 0 4px 14px rgba(217,52,43,0.30); animation: pulseWarn 2.4s ease-in-out infinite; }
@@ -137,7 +137,7 @@
     .warning-body p:last-child { margin-bottom: 0; }
 
     /* ============ PRODUIT REMINDER ============ */
-    .product-reminder { background: var(--white); border: 1px solid var(--border); border-radius: 18px; padding: 32px 40px; display: grid; grid-template-columns: 200px 1fr; gap: 32px; align-items: center; box-shadow: 0 6px 22px rgba(27,34,134,0.06); margin-bottom: 40px; }
+    .product-reminder { background: var(--white); border: 1px solid var(--border); border-radius: 18px; padding: 24px 32px; display: grid; grid-template-columns: 200px 1fr; gap: 32px; align-items: center; box-shadow: 0 6px 22px rgba(27,34,134,0.06); margin-bottom: 12px; }
     .product-reminder img { width: 100%; border-radius: 14px; background: var(--off-white); }
     .product-reminder-label { font-family: 'Manrope',sans-serif; font-size: 11px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--dark); font-weight: 800; margin-bottom: 10px; }
     .product-reminder-name { font-family: 'Manrope',sans-serif; font-size: 24px; font-weight: 800; color: var(--dark-deep); margin-bottom: 12px; line-height: 1.25; letter-spacing: -0.3px; }
@@ -210,7 +210,7 @@
     }
 
     /* BIBLIO GRID */
-    .biblio-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-top: 36px; max-width: 780px; margin-left: auto; margin-right: auto; }
+    .biblio-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 24px; }
     .biblio-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; position: relative; }
     .biblio-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(27,34,134,0.14); }
     .biblio-thumb { width: 100%; aspect-ratio: 9 / 16; object-fit: cover; display: block; background: var(--dark-pale); }
@@ -221,7 +221,7 @@
     .lib-modal-video-wrap { background: #000; border-radius: 14px; overflow: hidden; max-width: 420px; width: 100%; position: relative; }
     .lib-modal-video-wrap video { width: 100%; aspect-ratio: 9/16; object-fit: cover; display: block; }
     .lib-modal-close { position: absolute; top: -14px; right: -14px; background: var(--white); border: 1px solid var(--border); border-radius: 50%; width: 40px; height: 40px; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; z-index: 2; box-shadow: 0 6px 14px rgba(0,0,0,0.3); }
-    @media (max-width: 900px) { .biblio-grid { grid-template-columns: repeat(3, 1fr); max-width: 100%; } }
+    @media (max-width: 900px) { .biblio-grid { grid-template-columns: repeat(3, 1fr); } }
     @media (max-width: 480px) { .biblio-grid { grid-template-columns: repeat(2, 1fr); } }
 
     /* FOOTER */
