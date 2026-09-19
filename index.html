@@ -1,211 +1,578 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alpine White — Inspirations Affiliés</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --blue-deep:#1B2286; --blue:#2B34A8; --blue-soft:#C5CDF0; --bg-soft:#F4F5FB;
-    --text:#1A1F3D; --text-soft:#4A5490; --white:#fff; --border:#E5E7F0;
-  }
-  *{box-sizing:border-box;}
-  body{margin:0;background:#fff;font-family:'Inter',sans-serif;color:var(--text);-webkit-font-smoothing:antialiased;}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 20px 60px;}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alpine White — Inspirations Affiliés</title>
+  <meta name="description" content="Programme affiliés Alpine White · Blanchiment dentaire suisse — décryptage vidéos, hooks et formats qui vendent sur TikTok Shop France.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dark: #1B2286;
+      --dark-deep: #0F1863;
+      --dark-hover: #151A6E;
+      --dark-pale: #EEF0FA;
+      --white: #FFFFFF;
+      --off-white: #FBFBFD;
+      --border: #E4E6F0;
+      --text: #1A1F3D;
+      --text-soft: #6B7092;
+      --gold: #C9A227;
+      --gold-light: #E5B94D;
+      --gold-pale: #FFF6DC;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Manrope', sans-serif;
+      color: var(--text);
+      background: var(--off-white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
 
-  /* HERO */
-  .hero{background:linear-gradient(135deg,#0F1863 0%,#1B2286 55%,#2B34A8 100%);color:#fff;padding:54px 20px 60px;}
-  .hero-inner{max-width:1080px;margin:0 auto;}
-  .brand-tag{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);padding:6px 14px;border-radius:999px;font-size:11px;letter-spacing:2.4px;font-weight:800;text-transform:uppercase;margin-bottom:18px;}
-  .hero h1{font-family:'Manrope',sans-serif;font-size:40px;line-height:1.1;letter-spacing:-1px;font-weight:800;margin:0 0 14px;}
-  .hero p{font-size:15.5px;line-height:1.65;color:rgba(255,255,255,.86);max-width:680px;margin:0 0 26px;}
-  .hero-facts{display:flex;flex-wrap:wrap;gap:10px;}
-  .fact{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:10px;padding:10px 14px;font-size:12.5px;font-weight:600;}
+    /* HEADER */
+    .site-header { background: var(--dark); padding: 30px 24px 26px; text-align: center; }
+    .site-brand { color: var(--white); font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 22px; letter-spacing: 6px; text-transform: uppercase; margin-bottom: 6px; }
+    .site-brand .divider { color: rgba(255,255,255,0.5); margin: 0 20px; font-weight: 400; }
+    .site-tag { color: rgba(255,255,255,0.65); font-family: 'Manrope', sans-serif; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; }
 
-  /* PILL NAV */
-  .pill-nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;padding:26px 12px 4px;}
-  .pill-btn{display:inline-flex;align-items:center;gap:10px;padding:9px 20px 9px 11px;background:var(--blue-deep);color:#fff;border:none;border-radius:100px;font-family:'Manrope',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:1.6px;cursor:pointer;transition:all .2s;box-shadow:0 3px 10px rgba(27,34,134,.18);}
-  .pill-btn:hover{transform:translateY(-1px);background:var(--blue);}
-  .pill-btn.active{background:var(--blue);box-shadow:0 4px 12px rgba(27,34,134,.24);}
-  .pill-icon{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:30px;height:30px;border-radius:8px;background:rgba(255,255,255,.22);line-height:1;}
-  .pill-icon span{font-size:8px;font-weight:800;}
+    /* HERO */
+    .hero { background: var(--off-white); padding: 60px 24px 20px; text-align: center; }
+    .hero-eyebrow { color: var(--dark); font-family: 'Manrope', sans-serif; font-size: 12px; letter-spacing: 3.2px; text-transform: uppercase; font-weight: 800; margin-bottom: 32px; }
+    .hero-title { font-family: 'Manrope', sans-serif; font-size: 62px; font-weight: 800; line-height: 1.05; color: var(--dark-deep); max-width: 900px; margin: 0 auto 26px; letter-spacing: -1.5px; }
+    .hero-title em { font-style: normal; color: var(--gold); }
+    .hero-subtitle { font-size: 17px; color: var(--text-soft); max-width: 640px; margin: 0 auto 40px; line-height: 1.65; }
 
-  /* SECTION */
-  .section{background:#fff;border-radius:22px;padding:32px 34px;border:1px solid var(--blue-soft);margin-top:22px;box-shadow:0 6px 22px rgba(27,34,134,.08);}
-  .badge{display:inline-block;background:var(--blue-deep);color:#fff;padding:6px 14px;border-radius:999px;font-size:11px;letter-spacing:2px;font-weight:800;text-transform:uppercase;margin-bottom:14px;}
-  .section h2{font-family:'Manrope',sans-serif;font-size:26px;font-weight:800;color:#0F1863;line-height:1.2;letter-spacing:-.4px;margin:0 0 6px;}
-  .lede{font-size:14.5px;color:var(--text-soft);line-height:1.6;margin:0 0 22px;max-width:900px;}
-  .grid{display:grid;grid-template-columns:240px 1fr;gap:26px;align-items:start;margin-bottom:20px;}
-  .video-card{background:#000;border-radius:14px;overflow:hidden;border:2px solid var(--blue-deep);}
-  .video-card video{width:100%;display:block;aspect-ratio:9/16;object-fit:cover;}
-  .video-cap{margin-top:8px;font-size:11px;color:var(--text-soft);text-align:center;line-height:1.5;}
-  .kicker{font-size:12px;letter-spacing:1.5px;color:var(--blue-deep);font-weight:800;text-transform:uppercase;margin-bottom:10px;}
-  .block{background:var(--bg-soft);border-radius:10px;padding:14px 16px;margin-bottom:10px;border:1px solid var(--border);}
-  .block.hl{background:#EEF0FA;border-color:var(--blue-soft);}
-  .block-label{font-size:10.5px;letter-spacing:1.5px;color:var(--blue-deep);font-weight:800;text-transform:uppercase;margin-bottom:6px;}
-  .block-copy{font-size:13px;color:var(--text);line-height:1.6;font-style:italic;}
-  .do{font-size:12px;color:var(--text-soft);line-height:1.55;background:#fff;border-radius:6px;padding:8px 10px;margin-top:8px;font-style:normal;}
-  .screen-text{background:#fff;border-radius:10px;padding:12px 16px;margin-bottom:18px;border:1px solid var(--border);}
-  .screen-text .t{font-size:15px;color:#0F1863;font-weight:800;line-height:1.4;}
-  .warn{padding:16px 20px;background:#FFF9E6;border-left:3px solid #E6B84D;border-radius:8px;font-size:13px;color:#7A5A0A;line-height:1.65;margin-bottom:14px;}
-  details{background:var(--bg-soft);border:1px solid var(--blue-soft);border-radius:10px;overflow:hidden;}
-  summary{cursor:pointer;padding:14px 18px;font-size:12.5px;letter-spacing:1px;color:var(--blue-deep);font-weight:800;text-transform:uppercase;list-style:none;user-select:none;}
-  summary::-webkit-details-marker{display:none;}
-  summary::before{content:"▸ ";}
-  details[open] summary::before{content:"▾ ";}
-  .det-body{padding:0 18px 18px;}
-  .quote-card{background:#fff;border-radius:8px;padding:14px 16px;border:1px solid var(--border);margin-bottom:12px;}
-  .quote-card:last-child{margin-bottom:0;}
-  .quote-lbl{font-size:10.5px;letter-spacing:1.5px;font-weight:800;text-transform:uppercase;margin-bottom:8px;color:var(--text-soft);}
-  .quote-lbl.fr{color:var(--blue-deep);}
-  .quote-txt{font-size:13px;color:var(--text);line-height:1.7;font-style:italic;}
-  footer{text-align:center;padding:34px 20px;color:var(--text-soft);font-size:12.5px;}
-  @media(max-width:760px){.grid{grid-template-columns:1fr;}.hero h1{font-size:30px;}.section{padding:24px 20px;}}
-</style>
+    /* FEATURES */
+    .hero-features { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+    .feature { text-decoration: none; color: var(--text); text-align: center; transition: transform 0.2s; }
+    .feature:hover { transform: translateY(-4px); }
+    .feature-icon { width: 68px; height: 68px; background: var(--dark-pale); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 22px; color: var(--dark); }
+    .feature-title { font-family: 'Manrope', sans-serif; font-size: 13px; letter-spacing: 1.8px; text-transform: uppercase; font-weight: 800; color: var(--dark-deep); margin-bottom: 14px; }
+    .feature-desc { font-size: 14px; color: var(--text-soft); line-height: 1.55; max-width: 220px; margin: 0 auto; }
+
+    /* PILL NAV */
+    .pill-nav { display: flex; gap: 14px; justify-content: center; align-items: center; padding: 40px 24px 10px; flex-wrap: wrap; }
+    .pill { display: inline-flex; align-items: center; gap: 10px; background: var(--dark-deep); color: var(--white); padding: 10px 22px 10px 12px; border-radius: 999px; font-family: 'Manrope', sans-serif; font-size: 13px; font-weight: 800; letter-spacing: 1.4px; text-decoration: none; text-transform: uppercase; transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; border: none; }
+    .pill:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(27,34,134,0.25); }
+    .pill.gold { background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: #3A2705; }
+    .pill.gold:hover { box-shadow: 0 8px 20px rgba(201,162,39,0.35); }
+    .pill-icon { background: var(--white); color: var(--dark-deep); padding: 4px 8px; border-radius: 6px; font-size: 11px; font-weight: 800; display: inline-flex; align-items: center; justify-content: center; min-width: 32px; }
+    .pill.gold .pill-icon { background: var(--gold-pale); color: #7A5300; }
+
+    /* CONTAINER */
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 32px; }
+    .section { padding: 10px 0 10px; }
+
+    /* PLACEHOLDER CARDS */
+    .placeholder-card {
+      background: var(--white);
+      border: 2px dashed var(--border);
+      border-radius: 18px;
+      padding: 48px 40px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .placeholder-label {
+      display: inline-block;
+      background: var(--dark-pale);
+      color: var(--dark-deep);
+      font-family: 'Manrope', sans-serif;
+      font-size: 10.5px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 800;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+    }
+    .placeholder-title {
+      font-family: 'Manrope', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--dark-deep);
+      margin-bottom: 10px;
+      letter-spacing: -0.3px;
+    }
+    .placeholder-desc {
+      font-size: 14.5px;
+      color: var(--text-soft);
+      line-height: 1.65;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* BIBLIOTHÈQUE */
+    .biblio-section { padding: 24px 0 20px; }
+    .biblio-header { text-align: center; margin-bottom: 36px; }
+    .biblio-eyebrow { display: inline-block; background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: #3A2705; font-family: 'Manrope', sans-serif; font-size: 11px; letter-spacing: 2.4px; text-transform: uppercase; font-weight: 800; padding: 7px 16px; border-radius: 999px; margin-bottom: 18px; }
+    .biblio-title { font-family: 'Manrope', sans-serif; font-size: 32px; font-weight: 800; color: var(--dark-deep); line-height: 1.15; letter-spacing: -0.6px; margin-bottom: 12px; }
+    .biblio-intro { font-size: 15px; color: var(--text-soft); max-width: 640px; margin: 0 auto; line-height: 1.65; }
+    .biblio-empty {
+      background: var(--white);
+      border: 2px dashed var(--border);
+      border-radius: 18px;
+      padding: 60px 40px;
+      text-align: center;
+      margin-top: 36px;
+    }
+    .biblio-empty-icon { font-size: 42px; margin-bottom: 16px; opacity: 0.4; }
+    .biblio-empty-title { font-family: 'Manrope', sans-serif; font-size: 20px; font-weight: 800; color: var(--dark-deep); margin-bottom: 10px; }
+    .biblio-empty-desc { font-size: 14.5px; color: var(--text-soft); max-width: 500px; margin: 0 auto; line-height: 1.6; }
+
+    /* ============ WARNING CARD · Le piège ============ */
+    .warning-card { background: linear-gradient(135deg, #FFF5F5 0%, #FFEBE8 100%); border: 1.5px solid #FFB4A8; border-left: 6px solid #D9342B; border-radius: 16px; padding: 32px 36px; margin-bottom: 12px; box-shadow: 0 6px 22px rgba(217,52,43,0.10); position: relative; overflow: hidden; }
+    .warning-card::before { content:''; position:absolute; top:0; right:0; width:220px; height:220px; background: radial-gradient(circle, rgba(217,52,43,0.08), transparent 65%); pointer-events:none; }
+    .warning-header { display: flex; gap: 20px; align-items: center; margin-bottom: 18px; }
+    .warning-icon { background: #D9342B; color: var(--white); width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 26px; font-weight: 800; flex-shrink: 0; box-shadow: 0 4px 14px rgba(217,52,43,0.30); animation: pulseWarn 2.4s ease-in-out infinite; }
+    @keyframes pulseWarn { 0%,100% { box-shadow: 0 0 0 0 rgba(217,52,43,0.35), 0 4px 14px rgba(217,52,43,0.30); } 50% { box-shadow: 0 0 0 12px rgba(217,52,43,0), 0 4px 14px rgba(217,52,43,0.30); } }
+    .warning-label { font-family: 'Manrope',sans-serif; font-size: 11px; letter-spacing: 2.4px; text-transform: uppercase; color: #A31E17; font-weight: 800; margin-bottom: 6px; }
+    .warning-title { font-family: 'Manrope',sans-serif; font-size: 22px; font-weight: 800; color: #6B140F; line-height: 1.25; letter-spacing: -0.2px; }
+    .warning-body { font-size: 15px; color: #5A1811; line-height: 1.65; }
+    .warning-body strong { color: #6B140F; font-weight: 800; }
+    .warning-body p { margin-bottom: 8px; }
+    .warning-body p:last-child { margin-bottom: 0; }
+
+    /* ============ PRODUIT REMINDER ============ */
+    .product-reminder { background: var(--white); border: 1px solid var(--border); border-radius: 18px; padding: 24px 32px; display: grid; grid-template-columns: 200px 1fr; gap: 32px; align-items: center; box-shadow: 0 6px 22px rgba(27,34,134,0.06); margin-bottom: 12px; }
+    .product-reminder img { width: 100%; border-radius: 14px; background: var(--off-white); }
+    .product-reminder-label { font-family: 'Manrope',sans-serif; font-size: 11px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--dark); font-weight: 800; margin-bottom: 10px; }
+    .product-reminder-name { font-family: 'Manrope',sans-serif; font-size: 24px; font-weight: 800; color: var(--dark-deep); margin-bottom: 12px; line-height: 1.25; letter-spacing: -0.3px; }
+    .product-reminder-name span { color: var(--dark); font-style: italic; }
+    .product-reminder-desc { font-size: 14.5px; color: var(--text); line-height: 1.65; margin-bottom: 16px; }
+    .product-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+    .product-tag { background: var(--dark-pale); color: var(--dark-deep); padding: 6px 12px; border-radius: 999px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.3px; font-family: 'Manrope',sans-serif; }
+    @media (max-width: 700px) { .product-reminder { grid-template-columns: 1fr; text-align: center; } .product-reminder img { max-width: 200px; margin: 0 auto; } .warning-header { flex-direction: column; text-align: center; align-items: center; } }
+
+    /* ============ CONTENT BLOCKS · Autorité / Cure / Promo ============ */
+    .cblock { margin-bottom: 40px; }
+    .cblock-intro { font-size: 15.5px; color: var(--text); line-height: 1.7; font-style: italic; max-width: 720px; margin: 0 auto 28px; text-align: center; }
+    .cblock-intro strong { font-style: normal; color: var(--dark-deep); font-weight: 700; }
+    .cblock-insight { background: linear-gradient(135deg, #FFFBEB, #FFF6DC); border-left: 4px solid var(--gold); border-radius: 12px; padding: 16px 22px; margin-top: 24px; font-size: 14.5px; color: #6B4A00; line-height: 1.6; }
+    .cblock-insight strong { color: #4A3200; font-weight: 800; }
+
+    /* AUTORITÉ */
+    .auth-pill { display: block; text-align: center; margin: 0 auto 26px; background: var(--dark-deep); color: var(--white); font-family: 'Manrope',sans-serif; font-size: 12px; letter-spacing: 2px; font-weight: 800; text-transform: uppercase; padding: 12px 24px; border-radius: 999px; max-width: 520px; }
+    .auth-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 20px; }
+    .auth-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 22px 14px; text-align: center; transition: transform 0.2s; }
+    .auth-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(27,34,134,0.08); }
+    .auth-icon { font-size: 30px; margin-bottom: 10px; display: block; }
+    .auth-card-title { font-family: 'Manrope',sans-serif; font-size: 12.5px; font-weight: 800; color: var(--dark-deep); letter-spacing: 0.3px; line-height: 1.3; }
+    .benefit-badges { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 20px; }
+    .benefit-badge { border: 1px solid var(--border); border-radius: 14px; padding: 18px 16px; display: flex; gap: 12px; align-items: center; background: var(--white); }
+    .benefit-badge .icon { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; flex-shrink: 0; }
+    .benefit-badge.negative .icon { background: #FFE5E1; color: #D9342B; }
+    .benefit-badge.positive .icon { background: #E5F7EE; color: #2A9D6E; }
+    .benefit-badge .txt { font-family: 'Manrope',sans-serif; font-size: 13.5px; font-weight: 800; color: var(--dark-deep); line-height: 1.3; }
+    details.accordion { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 14px 20px; cursor: pointer; }
+    details.accordion summary { font-family: 'Manrope',sans-serif; font-size: 14px; font-weight: 800; color: var(--dark-deep); list-style: none; display: flex; align-items: center; gap: 8px; }
+    details.accordion summary::-webkit-details-marker { display: none; }
+    details.accordion summary::before { content: '▶'; font-size: 10px; color: var(--dark); transition: transform 0.2s; }
+    details.accordion[open] summary::before { transform: rotate(90deg); }
+    details.accordion .acc-body { margin-top: 12px; font-size: 14px; color: var(--text); line-height: 1.65; padding-top: 12px; border-top: 1px solid var(--border); }
+
+    /* CURE */
+    .protocol-title { text-align: center; font-family: 'Manrope',sans-serif; font-size: 20px; font-weight: 800; color: var(--dark-deep); letter-spacing: -0.3px; margin: 0 0 22px; }
+    .protocol-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 30px; }
+    .protocol-card { background: linear-gradient(135deg, var(--dark-pale), var(--white)); border: 1px solid #C9CFEA; border-radius: 14px; padding: 22px 16px; text-align: center; }
+    .protocol-icon { font-size: 32px; margin-bottom: 12px; display: block; }
+    .protocol-card-title { font-family: 'Manrope',sans-serif; font-size: 13.5px; font-weight: 800; color: var(--dark-deep); line-height: 1.35; }
+    .timeline { position: relative; margin: 30px 0 10px; padding: 20px 0 40px; }
+    .timeline::before { content: ''; position: absolute; top: 44px; left: 12%; right: 12%; height: 2px; background: var(--dark-pale); border-top: 2px dashed #C9CFEA; }
+    .timeline-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; position: relative; z-index: 2; }
+    .timeline-node { text-align: center; }
+    .timeline-dot { width: 24px; height: 24px; background: var(--dark); border-radius: 50%; margin: 0 auto 14px; box-shadow: 0 0 0 6px var(--off-white), 0 0 0 8px var(--dark-pale); }
+    .timeline-label { font-family: 'Manrope',sans-serif; font-size: 11.5px; font-weight: 800; color: var(--dark-deep); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 6px; }
+    .timeline-desc { font-size: 13px; color: var(--text-soft); line-height: 1.5; max-width: 180px; margin: 0 auto; }
+
+    /* PROMO */
+    .promo-card { display: grid; grid-template-columns: 220px 1fr; background: var(--white); border: 2px solid var(--dark); border-radius: 18px; overflow: hidden; box-shadow: 0 10px 30px rgba(27,34,134,0.10); margin: 10px auto 0; max-width: 780px; }
+    .promo-side { background: linear-gradient(135deg, #B99DE8, #D8C4F5); color: var(--white); padding: 30px 24px; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 8px; }
+    .promo-side-label { font-family: 'Manrope',sans-serif; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 800; color: #FFFFFF; opacity: 0.95; line-height: 1.35; }
+    .promo-side-brand { font-family: 'Manrope',sans-serif; font-size: 20px; font-weight: 800; color: var(--white); margin-top: 6px; }
+    .promo-body { padding: 26px 30px; }
+    .promo-desc { font-size: 13px; color: var(--text-soft); text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700; margin-bottom: 10px; }
+    .promo-prices { display: flex; align-items: baseline; gap: 14px; margin-bottom: 12px; }
+    .promo-old { font-size: 20px; color: var(--text-soft); text-decoration: line-through; font-weight: 600; }
+    .promo-new { font-size: 34px; color: var(--dark); font-weight: 800; letter-spacing: -0.8px; }
+    .promo-bonus { background: #FFF6DC; color: #7A5300; padding: 8px 14px; border-radius: 999px; display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 800; margin-bottom: 12px; }
+    .promo-tag { font-size: 12.5px; color: var(--text-soft); font-weight: 700; }
+    .promo-tag strong { color: var(--dark); font-weight: 800; }
+
+    @media (max-width: 800px) {
+      .auth-cards { grid-template-columns: repeat(2, 1fr); }
+      .benefit-badges, .protocol-cards, .timeline-row { grid-template-columns: 1fr; }
+      .timeline::before { display: none; }
+      .promo-card { grid-template-columns: 1fr; }
+    }
+
+    /* BIBLIO GRID */
+    .biblio-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 24px; }
+    .biblio-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; position: relative; }
+    .biblio-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(27,34,134,0.14); }
+    .biblio-thumb { width: 100%; aspect-ratio: 9 / 16; object-fit: cover; display: block; background: var(--dark-pale); }
+    .biblio-card-num { position: absolute; top: 10px; left: 10px; background: rgba(15,24,99,0.85); color: var(--white); font-family: 'Manrope', sans-serif; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 999px; }
+    /* Lightbox · vidéo + analyse */
+    .lib-modal { display: none; position: fixed; inset: 0; background: rgba(15,24,99,0.75); z-index: 999; padding: 30px 20px; overflow-y: auto; }
+    .lib-modal-inner { background: var(--white); max-width: 1000px; margin: 0 auto; border-radius: 18px; overflow: hidden; display: grid; grid-template-columns: 340px 1fr; position: relative; }
+    .lib-modal-video-wrap { background: #000; display: flex; align-items: center; }
+    .lib-modal-video-wrap video { width: 100%; aspect-ratio: 9 / 16; object-fit: cover; }
+    .lib-modal-body { padding: 30px 32px; overflow-y: auto; max-height: 85vh; }
+    .lib-modal-close { position: absolute; top: 12px; right: 12px; background: var(--white); border: 1px solid var(--border); border-radius: 50%; width: 36px; height: 36px; cursor: pointer; font-size: 18px; display: flex; align-items: center; justify-content: center; z-index: 2; }
+    .lib-modal-tag { display: inline-block; background: var(--dark-pale); color: var(--dark-deep); font-family: 'Manrope', sans-serif; font-size: 10.5px; letter-spacing: 1.4px; text-transform: uppercase; font-weight: 800; padding: 5px 11px; border-radius: 999px; margin-right: 6px; margin-bottom: 8px; }
+    .lib-modal-title { font-family: 'Manrope', sans-serif; font-size: 22px; font-weight: 800; color: var(--dark-deep); margin: 8px 0 20px; line-height: 1.2; letter-spacing: -0.3px; }
+    .lib-block { background: var(--off-white); border: 1px solid var(--border); border-left: 4px solid var(--dark); border-radius: 10px; padding: 14px 18px; margin-bottom: 12px; }
+    .lib-block-label { font-family: 'Manrope', sans-serif; font-size: 10.5px; letter-spacing: 1.4px; text-transform: uppercase; font-weight: 800; color: var(--dark-deep); margin-bottom: 6px; }
+    .lib-block-text { font-size: 14px; color: var(--text); line-height: 1.6; }
+    .lib-block-text strong { color: var(--dark-deep); }
+    .lib-block.notes { border-left-color: var(--gold); background: linear-gradient(135deg, #FFFBEB, var(--white)); }
+    .lib-block.notes .lib-block-label { color: #7A5300; }
+    @media (max-width: 900px) { .biblio-grid { grid-template-columns: repeat(3, 1fr); } .lib-modal-inner { grid-template-columns: 1fr; } .lib-modal-video-wrap video { max-height: 60vh; aspect-ratio: auto; } }
+    @media (max-width: 480px) { .biblio-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    /* FOOTER */
+    .footer { background: var(--dark-deep); color: rgba(255,255,255,0.7); padding: 40px 32px; text-align: center; margin-top: 100px; font-size: 13px; }
+
+    @media (max-width: 900px) {
+      .site-brand { font-size: 15px; letter-spacing: 3px; }
+      .site-brand .divider { margin: 0 10px; }
+      .hero { padding: 50px 20px 30px; }
+      .hero-title { font-size: 34px; }
+      .hero-features { grid-template-columns: repeat(2, 1fr); gap: 40px 20px; }
+    }
+  </style>
 </head>
 <body>
 
-<div class="hero">
-  <div class="hero-inner">
-    <div class="brand-tag">Alpine White · TikTok Shop France</div>
-    <h1>Inspirations Affiliés</h1>
-    <p>Chaque mois, un format qui marche — décortiqué, avec la vidéo d'inspiration et la copy prête à adapter. Tu n'as plus qu'à filmer.</p>
-    <div class="hero-facts">
-      <div class="fact">🇨🇭 Marque suisse</div>
-      <div class="fact">🦷 Développé avec des dentistes</div>
-      <div class="fact">⏳ Plus de 10 ans d'expérience</div>
-      <div class="fact">🛡 Sans danger pour l'émail et les gencives</div>
+  <header class="site-header">
+    <div class="site-brand">Alpine White <span class="divider">×</span> Sesame</div>
+    <div class="site-tag">Programme affiliés · TikTok Shop France</div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-eyebrow">Méthode Créative TikTok Shop</div>
+    <h1 class="hero-title">Vidéos, hooks, formats :<br>tout ce qui <em>fait vendre.</em></h1>
+    <p class="hero-subtitle">Un programme piloté par Sesame pour les créateurs Alpine White. Chaque semaine, on décrypte tout ce qui fait vendre sur TikTok Shop — vidéos, hooks et formats à reproduire dans ta vitrine.</p>
+
+    <div class="hero-features">
+      <a class="feature" href="#bibliotheque">
+        <div class="feature-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M10 9l5 3-5 3V9z" fill="currentColor" stroke="none"/></svg>
+        </div>
+        <div class="feature-title">Analyse de vidéos</div>
+        <div class="feature-desc">Les vidéos qui performent, décortiquées : transcript, contexte et ce qui les fait vendre.</div>
+      </a>
+      <a class="feature" href="#bibliotheque">
+        <div class="feature-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v6M6 9c0 3.3 2.7 6 6 6s6-2.7 6-6"/><path d="M6 15l6 6 6-6"/></svg>
+        </div>
+        <div class="feature-title">Hooks à reproduire</div>
+        <div class="feature-desc">Les accroches qui captent l'attention dans les 3 premières secondes — à copier dans tes vidéos.</div>
+      </a>
+      <a class="feature" href="#bibliotheque">
+        <div class="feature-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="12,2 15,9 22,9 17,14 19,21 12,17 5,21 7,14 2,9 9,9"/></svg>
+        </div>
+        <div class="feature-title">Formats</div>
+        <div class="feature-desc">Les structures qui convertissent cette semaine — à filmer dès aujourd'hui.</div>
+      </a>
+      <a class="feature" href="#bibliotheque">
+        <div class="feature-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v16H4z"/><path d="M4 8h16M8 4v16"/></svg>
+        </div>
+        <div class="feature-title">Bibliothèque</div>
+        <div class="feature-desc">Vidéos performantes du marché — transcript, traduction FR et analyse hook/format/CTA.</div>
+      </a>
     </div>
-  </div>
-</div>
 
-<div class="pill-nav">
-  <button class="pill-btn active" data-month="septembre"><span class="pill-icon"><span>2026</span><span>09</span></span>SEPTEMBRE →</button>
-</div>
+    <nav class="pill-nav">
+      <a class="pill" href="#warning"><span class="pill-icon">🚀</span> Commencez par ici <span style="margin-left:6px;">→</span></a>
+      <a class="pill" href="#septembre-contenu"><span class="pill-icon">📅</span> Septembre · Contenu <span style="margin-left:6px;">→</span></a>
+      <a class="pill gold" href="#bibliotheque"><span class="pill-icon">📚</span> Bibliothèque <span style="margin-left:6px;">→</span></a>
+    </nav>
+  </section>
 
-<div class="wrap">
+  <main class="container">
+    <section class="section" id="warning">
+      <!-- ============ WARNING · 3 POINTS ============ -->
+      <div class="warning-card">
+        <div class="warning-header">
+          <div class="warning-icon">⚠</div>
+          <div>
+            <div class="warning-label">Message important pour les créateurs</div>
+            <div class="warning-title">Les 3 points à ne JAMAIS oublier dans tes vidéos Alpine White</div>
+          </div>
+        </div>
+        <div class="warning-body">
+          <p><strong>🇨🇭 1. L'autorité suisse.</strong> Alpine White est une marque suisse de soins bucco-dentaires, avec son cabinet à Zurich. La technologie a été co-développée avec des dentistes.</p>
+          <p><strong>⏱ 2. Cure de 7 jours — immédiat + durable.</strong> C'est une cure de 7 jours. Tu vois un résultat immédiat dès la première utilisation, mais le vrai résultat durable s'installe jour après jour, sur toute la cure.</p>
+          <p><strong>🎁 3. Prix de lancement exclusif TikTok Shop.</strong> -43 % par rapport au site officiel (29,90 € → 16,99 €) + bâtonnets interdentaires offerts.</p>
+        </div>
+      </div>
+    </section>
 
-  <div class="month-content" data-month="septembre">
+    <section class="section" id="produit">
+      <!-- ============ PRODUIT ============ -->
+      <div class="product-reminder">
+        <img src="product.png" alt="Alpine White — Whitening Strips">
+        <div>
+          <div class="product-reminder-label">📌 Le produit</div>
+          <div class="product-reminder-name">Alpine White — <span>Whitening Strips 7 jours.</span></div>
+          <p class="product-reminder-desc">Une cure de blanchiment dentaire suisse — <strong>14 bandes pour 7 jours de traitement</strong>. Co-développée avec des hygiénistes dentaires du studio Zurich Stadelhofen, sans peroxyde, avec la techno PAP qui n'attaque ni l'émail ni les gencives.</p>
+          <div class="product-tags">
+            <span class="product-tag">🇨🇭 Marque suisse</span>
+            <span class="product-tag">⏱ Cure 7 jours</span>
+            <span class="product-tag">🦷 Sans peroxyde</span>
+            <span class="product-tag">Techno PAP</span>
+            <span class="product-tag">Safe émail & gencives</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="section" id="test-moitie-bouche">
+    <!-- ============ SEPTEMBRE · FORMAT DU MOIS ============ -->
+    <section class="section" id="septembre-contenu" style="background:#fff;border-radius:22px;padding:32px 34px;border:1px solid #C5CDF0;margin-bottom:28px;box-shadow:0 6px 22px rgba(27,34,134,.08);">
 
-      <div class="badge">📅 Septembre · Format du mois</div>
+      <div style="display:inline-block;background:#1B2286;color:#fff;padding:6px 14px;border-radius:999px;font-size:11px;letter-spacing:2px;font-weight:800;text-transform:uppercase;margin-bottom:14px;">📅 Septembre · Format du mois</div>
 
-      <h2>Ici, c'est le visuel qui vend : blanchis seulement le haut</h2>
-      <p class="lede">Tu n'as rien à argumenter, rien à promettre. Tu blanchis <strong>uniquement les dents du haut</strong> et tu laisses le bas intact — à la fin, la comparaison est dans la même bouche, au même moment, sous la même lumière. Personne ne peut dire que c'est le filtre ou l'éclairage. <strong>C'est l'image qui fait la vente.</strong></p>
+      <h2 style="font-family:'Manrope',sans-serif;font-size:26px;font-weight:800;color:#0F1863;line-height:1.2;letter-spacing:-.4px;margin:0 0 6px;">Ici, c'est le visuel qui vend : blanchis seulement le haut</h2>
+      <p style="font-size:14.5px;color:#4A5490;line-height:1.6;margin:0 0 22px;max-width:900px;">Tu n'as rien à argumenter, rien à promettre. Tu blanchis <strong>uniquement les dents du haut</strong> et tu laisses le bas intact — à la fin, la comparaison est dans la même bouche, au même moment, sous la même lumière. Personne ne peut dire que c'est le filtre ou l'éclairage. <strong>C'est l'image qui fait la vente.</strong></p>
 
-      <div class="grid">
+      <div style="display:grid;grid-template-columns:240px 1fr;gap:26px;align-items:start;margin-bottom:20px;">
 
         <div>
-          <div class="video-card">
-            <video controls preload="metadata" playsinline poster="test-moitie-bouche.jpg">
+          <div style="background:#000;border-radius:14px;overflow:hidden;border:2px solid #1B2286;">
+            <video controls preload="metadata" playsinline poster="test-moitie-bouche.jpg" style="width:100%;display:block;aspect-ratio:9/16;object-fit:cover;">
               <source src="test-moitie-bouche.mp4" type="video/mp4">
             </video>
           </div>
-          <div class="video-cap">Vidéo d'inspiration — reproduis la structure avec tes bandes Alpine White.</div>
+          <div style="margin-top:8px;font-size:11px;color:#4A5490;text-align:center;line-height:1.5;">Vidéo d'inspiration — reproduis la structure avec tes bandes Alpine White.</div>
         </div>
 
         <div>
 
-          <div class="screen-text">
-            <div class="block-label">🎬 Texte à l'écran — il reste pendant toute la vidéo</div>
-            <div class="t">« Je blanchis seulement le haut, pour voir si ça marche vraiment 😳 »</div>
+          <div style="background:#fff;border-radius:10px;padding:12px 16px;margin-bottom:18px;border:1px solid #E5E7F0;">
+            <div style="font-size:10.5px;letter-spacing:1.5px;color:#1B2286;font-weight:800;text-transform:uppercase;margin-bottom:6px;">🎬 Texte à l'écran — il reste pendant toute la vidéo</div>
+            <div style="font-size:15px;color:#0F1863;font-weight:800;line-height:1.4;">« Je blanchis seulement le haut, pour voir si ça marche vraiment 😳 »</div>
           </div>
 
-          <div class="kicker">📝 Ce que tu dis, dans l'ordre</div>
+          <div style="font-size:12px;letter-spacing:1.5px;color:#1B2286;font-weight:800;text-transform:uppercase;margin-bottom:10px;">📝 Ce que tu dis, dans l'ordre</div>
 
-          <div class="block">
-            <div class="block-label">1 · Le hook</div>
-            <div class="block-copy">« Si ça marche, je vais halluciner. »</div>
+          <div style="background:#F4F5FB;border-radius:10px;padding:14px 16px;margin-bottom:10px;border:1px solid #E5E7F0;">
+            <div style="font-size:10.5px;letter-spacing:1.5px;color:#1B2286;font-weight:800;text-transform:uppercase;margin-bottom:6px;">1 · Le hook</div>
+            <div style="font-size:13px;color:#1A1F3D;line-height:1.6;font-style:italic;">« Si ça marche, je vais halluciner. »</div>
           </div>
 
-          <div class="block">
-            <div class="block-label">2 · La préparation</div>
-            <div class="block-copy">« Il faut bien sécher ses dents avant, c'est important. »
-              <div class="do">🎬 <strong>Ce que tu fais :</strong> tu sèches tes dents avec un mouchoir ou une serviette, face caméra. Ce geste rend la vidéo crédible — on voit que tu fais les choses sérieusement.</div>
-            </div>
+          <div style="background:#F4F5FB;border-radius:10px;padding:14px 16px;margin-bottom:10px;border:1px solid #E5E7F0;">
+            <div style="font-size:10.5px;letter-spacing:1.5px;color:#1B2286;font-weight:800;text-transform:uppercase;margin-bottom:6px;">2 · La préparation</div>
+            <div style="font-size:13px;color:#1A1F3D;line-height:1.6;font-style:italic;">« Il faut bien sécher ses dents avant, c'est important. »</div>
+            <div style="font-size:12px;color:#4A5490;line-height:1.55;background:#fff;border-radius:6px;padding:8px 10px;margin-top:8px;">🎬 <strong>Ce que tu fais :</strong> tu sèches tes dents avec un mouchoir ou une serviette, face caméra. Ce geste rend la vidéo crédible — on voit que tu fais les choses sérieusement.</div>
           </div>
 
-          <div class="block">
-            <div class="block-label">3 · La pose + le chrono</div>
-            <div class="block-copy">« Bon, j'ai lancé un chrono d'une heure. J'ai mis seulement sur le haut, comme ça on pourra comparer avec le bas. Je reviens dans une heure. »
-              <div class="do">🎬 <strong>Ce que tu fais :</strong> tu montres le chrono sur ton téléphone, puis tu appliques la bande sur les dents du haut uniquement.</div>
-            </div>
+          <div style="background:#F4F5FB;border-radius:10px;padding:14px 16px;margin-bottom:10px;border:1px solid #E5E7F0;">
+            <div style="font-size:10.5px;letter-spacing:1.5px;color:#1B2286;font-weight:800;text-transform:uppercase;margin-bottom:6px;">3 · La pose + le chrono</div>
+            <div style="font-size:13px;color:#1A1F3D;line-height:1.6;font-style:italic;">« Bon, j'ai lancé un chrono d'une heure. J'ai mis seulement sur le haut, comme ça on pourra comparer avec le bas. Je reviens dans une heure. »</div>
+            <div style="font-size:12px;color:#4A5490;line-height:1.55;background:#fff;border-radius:6px;padding:8px 10px;margin-top:8px;">🎬 <strong>Ce que tu fais :</strong> tu montres le chrono sur ton téléphone, puis tu appliques la bande sur les dents du haut uniquement.</div>
           </div>
 
-          <div class="block">
-            <div class="block-label">4 · Le retrait</div>
-            <div class="block-copy">« L'heure est écoulée — maintenant on retire. Et on essuie. »
-              <div class="do">🎬 <strong>Ce que tu fais :</strong> plan serré sur la bande qui se décolle, puis sur la bouche. C'est le moment que les gens attendent — ne le coupe pas.</div>
-            </div>
+          <div style="background:#F4F5FB;border-radius:10px;padding:14px 16px;margin-bottom:10px;border:1px solid #E5E7F0;">
+            <div style="font-size:10.5px;letter-spacing:1.5px;color:#1B2286;font-weight:800;text-transform:uppercase;margin-bottom:6px;">4 · Le retrait</div>
+            <div style="font-size:13px;color:#1A1F3D;line-height:1.6;font-style:italic;">« L'heure est écoulée — maintenant on retire. Et on essuie. »</div>
+            <div style="font-size:12px;color:#4A5490;line-height:1.55;background:#fff;border-radius:6px;padding:8px 10px;margin-top:8px;">🎬 <strong>Ce que tu fais :</strong> plan serré sur la bande qui se décolle, puis sur la bouche. C'est le moment que les gens attendent — ne le coupe pas.</div>
           </div>
 
-          <div class="block hl">
-            <div class="block-label">5 · ⭐ La réaction — le cœur de la vidéo</div>
-            <div class="block-copy">« Attends… quoi ?<br>Non mais c'est dingue.<br>Attends, quoi ?! »
-              <div class="do">🎬 <strong>Ce que tu fais :</strong> ne joue pas la réaction, laisse-la sortir. Filme-toi en découvrant le résultat pour de vrai — c'est ça qui rend la vidéo crédible.</div>
-            </div>
+          <div style="background:#EEF0FA;border-radius:10px;padding:14px 16px;margin-bottom:10px;border:1px solid #C5CDF0;">
+            <div style="font-size:10.5px;letter-spacing:1.5px;color:#1B2286;font-weight:800;text-transform:uppercase;margin-bottom:6px;">5 · ⭐ La réaction — le cœur de la vidéo</div>
+            <div style="font-size:13px;color:#1A1F3D;line-height:1.6;font-style:italic;">« Attends… quoi ?<br>Non mais c'est dingue.<br>Attends, quoi ?! »</div>
+            <div style="font-size:12px;color:#4A5490;line-height:1.55;background:#fff;border-radius:6px;padding:8px 10px;margin-top:8px;">🎬 <strong>Ce que tu fais :</strong> ne joue pas la réaction, laisse-la sortir. Filme-toi en découvrant le résultat pour de vrai — c'est ça qui rend la vidéo crédible.</div>
           </div>
 
-          <div class="block">
-            <div class="block-label">6 · Le reveal</div>
-            <div class="block-copy">« Vous voyez la différence ? Et après vous prenez votre brosse à dents et vous enlevez le reste. »
-              <div class="do">🎬 <strong>Ce que tu fais :</strong> bouche ouverte, tu pointes les dents du haut avec le bas dans le même cadre. C'est LE plan de la vidéo.</div>
-            </div>
+          <div style="background:#F4F5FB;border-radius:10px;padding:14px 16px;margin-bottom:10px;border:1px solid #E5E7F0;">
+            <div style="font-size:10.5px;letter-spacing:1.5px;color:#1B2286;font-weight:800;text-transform:uppercase;margin-bottom:6px;">6 · Le reveal</div>
+            <div style="font-size:13px;color:#1A1F3D;line-height:1.6;font-style:italic;">« Vous voyez la différence ? Et après vous prenez votre brosse à dents et vous enlevez le reste. »</div>
+            <div style="font-size:12px;color:#4A5490;line-height:1.55;background:#fff;border-radius:6px;padding:8px 10px;margin-top:8px;">🎬 <strong>Ce que tu fais :</strong> bouche ouverte, tu pointes les dents du haut avec le bas dans le même cadre. C'est LE plan de la vidéo.</div>
           </div>
 
-          <div class="block">
-            <div class="block-label">7 · La conclusion</div>
-            <div class="block-copy">« Franchement c'est fou. Je fais celles du bas juste après, mais ça valait clairement le coup. »</div>
+          <div style="background:#F4F5FB;border-radius:10px;padding:14px 16px;margin-bottom:10px;border:1px solid #E5E7F0;">
+            <div style="font-size:10.5px;letter-spacing:1.5px;color:#1B2286;font-weight:800;text-transform:uppercase;margin-bottom:6px;">7 · La conclusion</div>
+            <div style="font-size:13px;color:#1A1F3D;line-height:1.6;font-style:italic;">« Franchement c'est fou. Je fais celles du bas juste après, mais ça valait clairement le coup. »</div>
           </div>
 
-          <div class="block hl">
-            <div class="block-label">8 · La marque + le CTA</div>
-            <div class="block-copy">« Et c'est Alpine White, une marque suisse — plus de dix ans d'expérience, des bandes développées avec des dentistes. La technologie est sans danger pour l'émail et les gencives, donc zéro stress. Si ça vous intéresse, c'est juste là, dans le petit panier. »
-              <div class="do">🎬 <strong>Ce que tu fais :</strong> tu montres la boîte à la caméra. Seulement maintenant — jamais avant.</div>
-            </div>
+          <div style="background:#EEF0FA;border-radius:10px;padding:14px 16px;border:1px solid #C5CDF0;">
+            <div style="font-size:10.5px;letter-spacing:1.5px;color:#1B2286;font-weight:800;text-transform:uppercase;margin-bottom:6px;">8 · La marque + le CTA</div>
+            <div style="font-size:13px;color:#1A1F3D;line-height:1.6;font-style:italic;">« Et c'est Alpine White, une marque suisse — leurs bandes sont co-développées avec des dentistes à Zurich. C'est sans peroxyde, techno PAP, donc ça n'attaque ni l'émail ni les gencives. Là c'est une cure de 7 jours et tu vois déjà le résultat dès la première fois. Si ça vous intéresse, c'est juste là, dans le petit panier. »</div>
+            <div style="font-size:12px;color:#4A5490;line-height:1.55;background:#fff;border-radius:6px;padding:8px 10px;margin-top:8px;">🎬 <strong>Ce que tu fais :</strong> tu montres la boîte à la caméra. Seulement maintenant — jamais avant.</div>
           </div>
 
         </div>
 
       </div>
 
-      <div class="warn">
-        ⚠️ <strong>L'ordre est essentiel :</strong> les arguments de la marque arrivent <em>après</em> la réaction, jamais avant. D'abord la personne voit le résultat, ensuite elle reçoit la raison de faire confiance. Si tu commences par « marque suisse développée avec des dentistes », la vidéo est lue comme une pub et elle est scrollée.
+      <div style="padding:16px 20px;background:#FFF9E6;border-left:3px solid #E6B84D;border-radius:8px;font-size:13px;color:#7A5A0A;line-height:1.65;margin-bottom:14px;">
+        ⚠️ <strong>L'ordre est essentiel :</strong> les arguments de la marque arrivent <em>après</em> la réaction, jamais avant. D'abord la personne voit le résultat, ensuite elle reçoit la raison de faire confiance. Si tu commences par « marque suisse co-développée avec des dentistes », la vidéo est lue comme une pub et elle est scrollée.
       </div>
 
-      <details>
-        <summary>📄 Transcript original de la vidéo (EN) + traduction FR</summary>
-        <div class="det-body">
+      <details style="background:#F4F5FB;border:1px solid #C5CDF0;border-radius:10px;overflow:hidden;">
+        <summary style="cursor:pointer;padding:14px 18px;font-size:12.5px;letter-spacing:1px;color:#1B2286;font-weight:800;text-transform:uppercase;list-style:none;user-select:none;">📄 Transcript original de la vidéo (EN) + traduction FR</summary>
+        <div style="padding:0 18px 18px;">
 
-          <div class="quote-card">
-            <div class="quote-lbl">🇬🇧 Original</div>
-            <div class="quote-txt">« If this works I'm gonna be shook. You have to dry your teeth. All right, guys, I started a 30-minute timer, only put on the top so we can compare to the bottom. I'll be back in 30 minutes. All right, yo, the 30-minute timer is up and now you just remove. And you just wipe. Bro, wait what? Wait, that's crazy. Wait what? Can y'all see the difference? And then you just get your toothbrush, remove everything else. Y'all that's crazy. I'm about to do the bottom ones next but this was definitely worth it. If anyone's interested I'll have them right here, so you guys can go check them out. »</div>
+          <div style="background:#fff;border-radius:8px;padding:14px 16px;margin-bottom:12px;border:1px solid #E5E7F0;">
+            <div style="font-size:10.5px;letter-spacing:1.5px;color:#4A5490;font-weight:800;text-transform:uppercase;margin-bottom:8px;">🇬🇧 Original</div>
+            <div style="font-size:13px;color:#1A1F3D;line-height:1.7;font-style:italic;">« If this works I'm gonna be shook. You have to dry your teeth. All right, guys, I started a 30-minute timer, only put on the top so we can compare to the bottom. I'll be back in 30 minutes. All right, yo, the 30-minute timer is up and now you just remove. And you just wipe. Bro, wait what? Wait, that's crazy. Wait what? Can y'all see the difference? And then you just get your toothbrush, remove everything else. Y'all that's crazy. I'm about to do the bottom ones next but this was definitely worth it. If anyone's interested I'll have them right here, so you guys can go check them out. »</div>
           </div>
 
-          <div class="quote-card">
-            <div class="quote-lbl fr">🇫🇷 Traduction</div>
-            <div class="quote-txt">« Si ça marche, je vais halluciner. Il faut sécher ses dents. Bon les amis, j'ai lancé un chrono de 30 minutes, j'ai mis seulement sur le haut pour qu'on puisse comparer avec le bas. Je reviens dans 30 minutes. Voilà, le chrono est terminé et maintenant on retire. Et on essuie. Frère, attends… quoi ? Attends, c'est dingue. Attends, quoi ? Vous voyez la différence ? Et après vous prenez votre brosse à dents, vous enlevez tout le reste. Les amis, c'est fou. Je fais celles du bas juste après, mais ça valait clairement le coup. Si ça intéresse quelqu'un, c'est juste là, vous pouvez aller voir. »</div>
+          <div style="background:#fff;border-radius:8px;padding:14px 16px;margin-bottom:12px;border:1px solid #E5E7F0;">
+            <div style="font-size:10.5px;letter-spacing:1.5px;color:#1B2286;font-weight:800;text-transform:uppercase;margin-bottom:8px;">🇫🇷 Traduction</div>
+            <div style="font-size:13px;color:#1A1F3D;line-height:1.7;font-style:italic;">« Si ça marche, je vais halluciner. Il faut sécher ses dents. Bon les amis, j'ai lancé un chrono de 30 minutes, j'ai mis seulement sur le haut pour qu'on puisse comparer avec le bas. Je reviens dans 30 minutes. Voilà, le chrono est terminé et maintenant on retire. Et on essuie. Frère, attends… quoi ? Attends, c'est dingue. Attends, quoi ? Vous voyez la différence ? Et après vous prenez votre brosse à dents, vous enlevez tout le reste. Les amis, c'est fou. Je fais celles du bas juste après, mais ça valait clairement le coup. Si ça intéresse quelqu'un, c'est juste là, vous pouvez aller voir. »</div>
           </div>
 
-          <div class="quote-card" style="background:#FFF9E6;border-color:#E6B84D;">
-            <div class="quote-lbl" style="color:#7A5A0A;">⏱ À adapter</div>
-            <div class="quote-txt" style="font-style:normal;color:#7A5A0A;">Dans la vidéo originale le temps de pose est de 30 minutes. <strong>Pour les bandes Alpine White, c'est une heure.</strong> Pense à ajuster le chrono que tu montres à l'écran.</div>
+          <div style="background:#FFF9E6;border:1px solid #E6B84D;border-radius:8px;padding:14px 16px;">
+            <div style="font-size:10.5px;letter-spacing:1.5px;color:#7A5A0A;font-weight:800;text-transform:uppercase;margin-bottom:8px;">⏱ À adapter</div>
+            <div style="font-size:13px;color:#7A5A0A;line-height:1.7;">Dans la vidéo originale le temps de pose est de 30 minutes. <strong>Pour les bandes Alpine White, c'est une heure.</strong> Pense à ajuster le chrono que tu montres à l'écran.</div>
           </div>
 
         </div>
       </details>
 
-    </div>
+    </section>
 
+    <!-- BIBLIOTHÈQUE -->
+    <section class="biblio-section" id="bibliotheque">
+      <div class="biblio-header">
+        <div class="biblio-eyebrow">📚 Bibliothèque · Vidéos référence</div>
+        <h2 class="biblio-title">6 vidéos qui cartonnent sur le blanchiment dentaire</h2>
+        <p class="biblio-intro">Toutes marques confondues — inspire-toi des formats qui vendent vraiment ce type de produit. Clique sur une vignette pour voir la vidéo <strong>+ analyse hook / format / CTA + traduction FR</strong>.</p>
+      </div>
+      <div class="biblio-grid">
+        <div class="biblio-card" data-vid="1"><img class="biblio-thumb" src="lib1.jpg" alt="Vidéo 1"><div class="biblio-card-num">#1</div></div>
+        <div class="biblio-card" data-vid="2"><img class="biblio-thumb" src="lib2.jpg" alt="Vidéo 2"><div class="biblio-card-num">#2</div></div>
+        <div class="biblio-card" data-vid="3"><img class="biblio-thumb" src="lib3.jpg" alt="Vidéo 3"><div class="biblio-card-num">#3</div></div>
+        <div class="biblio-card" data-vid="4"><img class="biblio-thumb" src="lib4.jpg" alt="Vidéo 4"><div class="biblio-card-num">#4</div></div>
+        <div class="biblio-card" data-vid="5"><img class="biblio-thumb" src="lib5.jpg" alt="Vidéo 5"><div class="biblio-card-num">#5</div></div>
+        <div class="biblio-card" data-vid="6"><img class="biblio-thumb" src="lib6.jpg" alt="Vidéo 6"><div class="biblio-card-num">#6</div></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- LIGHTBOX · vidéo + analyse -->
+  <div class="lib-modal" id="lib-modal">
+    <div class="lib-modal-inner">
+      <button class="lib-modal-close" onclick="closeLibModal()">×</button>
+      <div class="lib-modal-video-wrap">
+        <video id="lib-modal-video" controls playsinline preload="metadata"></video>
+      </div>
+      <div class="lib-modal-body">
+        <span class="lib-modal-tag" id="lib-num">#1</span>
+        <span class="lib-modal-tag" id="lib-brand">brand</span>
+        <h3 class="lib-modal-title" id="lib-title">Titre</h3>
+
+        <div class="lib-block"><div class="lib-block-label">🎣 Hook</div><div class="lib-block-text" id="lib-hook">—</div></div>
+        <div class="lib-block"><div class="lib-block-label">🎬 Format</div><div class="lib-block-text" id="lib-format">—</div></div>
+        <div class="lib-block"><div class="lib-block-label">📣 CTA</div><div class="lib-block-text" id="lib-cta">—</div></div>
+        <div class="lib-block"><div class="lib-block-label">📝 Transcript original (EN)</div><div class="lib-block-text" id="lib-orig">—</div></div>
+        <div class="lib-block"><div class="lib-block-label">🇫🇷 Traduction FR</div><div class="lib-block-text" id="lib-fr">—</div></div>
+        <div class="lib-block notes"><div class="lib-block-label">💡 Notes pour Alpine White</div><div class="lib-block-text" id="lib-notes">—</div></div>
+      </div>
+    </div>
   </div>
 
-</div>
+  <script>
+    window.__LIB_DATA__ = {
+      "1": {
+        "brand": "Créatrice · review avec reveal",
+        "original": "I know you guys can see that difference. Look at that. Today we're trying out the Dr. Dent teeth whitening strips. I've seen these all over TikTok. They have a lot of good reviews. So let's see what the hype is about. Honestly, if they don't work — which I don't think they will — because I feel like teeth whitening strips are like the biggest scam ever. I literally don't care because these were like cheap as hell. So I'm only going to put it on my top one so we can see the difference. Okay, look crazy, but now we wait 30 minutes. It's been about 30 minutes, time to take these off now, so let's see. Oh my gosh. What the hell? Look at that. These are actually the first teeth whitening strips that didn't make my gums throb, so I'm just going to get them right now because they're running out — I'll link them down below so you guys can get white teeth just like this.",
+        "traduction_fr": "Je sais que vous voyez cette différence, regardez ça. Aujourd'hui on teste les bandes blanchissantes Dr. Dent. Je les ai vues partout sur TikTok, elles ont plein de bonnes reviews, donc on va voir ce que vaut le hype. Franchement, si elles ne marchent pas — ce que je pense — parce que je trouve que les bandes blanchissantes sont la plus grosse arnaque qui soit. Je m'en fiche, elles étaient hyper pas chères. Donc je les mets uniquement sur mes dents du haut pour qu'on voie la différence. OK ça a l'air fou, mais maintenant on attend 30 minutes. Ça fait environ 30 minutes, il est temps de les enlever, voyons. Oh mon dieu ! Regardez ça. Ce sont les premières bandes blanchissantes qui ne m'ont pas fait mal aux gencives, donc je vais en racheter tout de suite parce que ça part vite — je laisse le lien en bas pour que vous ayez les dents blanches comme ça.",
+        "hook": "Hook visuel : gros plan sur les dents blanches APRÈS la bande — reveal du résultat dès les premières secondes (0-2s)",
+        "format": "Review · Test personnel avec avant/après",
+        "cta": "« Je vais en racheter tout de suite parce que ça part vite — je laisse le lien en bas pour que vous ayez les dents blanches comme ça » — CTA urgence stock + lien affilié",
+        "notes": "⭐ MODÈLE DE COPY à reproduire pour Alpine White :\n\n« Il y a plein de vidéos sur les bandes blanchissantes sur TikTok. Moi, j'ai voulu tester une marque en qui j'ai confiance : Alpine White. Une marque suisse spécialisée en soins bucco-dentaires, avec cabinet dentaire à Zurich, co-développée avec des dentistes. Et surtout, ce n'est pas juste une application — c'est une CURE DE 7 JOURS. Résultat immédiat + durable. Là je vous montre le résultat après [X jours]. »\n\n💡 Le résultat visuel = HOOK. Le script ci-dessus + tag Alpine White = ta vidéo prête."
+      },
+      "2": {
+        "brand": "Créatrice · react avec douleur fumeurs",
+        "original": "Do you want to see it? Oh my god. Oh my god mom. Why are your top teeth actually white? It doesn't make a difference. Oh my god. You needed fucking white in your bottle once. People said this Dr. Dent stuff is supposed to work in one session, and I think it definitely worked in one session — like way better than I thought it was gonna be. And they're enamel safe, so they should be good for people with sensitive teeth. I'll leave a link down below if you guys do want to give it a try.",
+        "traduction_fr": "Tu veux voir ? Oh mon dieu. Oh mon dieu maman. Pourquoi tes dents du haut sont vraiment blanches ? Ça ne fait aucune différence. Oh mon dieu. Il t'en fallait vraiment. Les gens ont dit que ce truc Dr. Dent est censé marcher en une seule session, et je pense qu'il a vraiment marché en une session — largement mieux que ce que je pensais. Et elles sont safe pour l'émail, donc parfait pour les gens avec des dents sensibles. Je laisse un lien en bas si vous voulez essayer.",
+        "hook": "Hook visuel + douleur : les fumeurs et le café → dents jaunes. Réaction spontanée d'un témoin qui découvre le résultat blanc",
+        "format": "Réaction / React · Découverte du résultat par un tiers",
+        "cta": "« Je laisse le lien en bas si vous voulez essayer »",
+        "notes": "Format ULTRA persuasif — la réaction d'un TIERS vend 10x plus qu'un test solo. Reproduis avec ta mère/sœur/pote qui découvre ton sourire.\n\nPour Alpine White, ajoute impérativement :\n• Marque SUISSE spécialisée en santé bucco-dentaire, cabinet dentaire à Zurich, co-développée avec des dentistes\n• C'est une CURE DE 7 JOURS — pas un one-shot\n• Résultat immédiat + durable"
+      },
+      "3": {
+        "brand": "Créatrice · review court avec reveal",
+        "original": "I'm going to try this kit from TikTok, and we can take them off because it's been over 30 minutes. Let's see. That is crazy. Are y'all seeing? Oh my gosh. Are y'all seeing the difference? Like this looks disgusting. Oh my gosh. This is insane. Hold on. I have to do the bottom.",
+        "traduction_fr": "Je vais essayer ce kit TikTok, et on peut les enlever parce que ça fait plus de 30 minutes. Voyons. C'est fou. Vous voyez ? Oh mon dieu. Vous voyez la différence ? On dirait un truc dégueu. Oh mon dieu. C'est incroyable. Attendez. Je dois faire le bas maintenant.",
+        "hook": "Hook visuel : le résultat en gros plan (dents blanches) dès les premières secondes",
+        "format": "Review · Format court avec reveal",
+        "cta": "« Le lien est en bas si vous voulez tester »",
+        "notes": "⭐ MÊME MODÈLE que la vidéo #1 :\n\n« Il y a plein de vidéos sur les bandes blanchissantes sur TikTok. Moi j'ai testé une marque en qui j'ai confiance : Alpine White, marque suisse, cabinet dentaire à Zurich, co-développée avec des dentistes. C'est une CURE DE 7 JOURS. Résultat immédiat + durable. »\n\n💡 Le texte à l'écran doit être IMPACTANT — pas « regardez la différence » (personne ne s'y arrête). Utilise plutôt :\n• « J'ai changé de dents »\n• « Ma dentiste ne me reconnaît plus »\n• « Le compliment que je reçois tous les jours maintenant »\n• « J'ai arrêté de sourire bouche fermée »"
+      },
+      "4": {
+        "brand": "Éducation safety · sans peroxyde",
+        "original": "If your teeth are yellow like this, I guess you just take this, stretch, stick, and this, stretch, stick. This looks a little crazy. You got to be super careful with whitening strips because they can damage your enamel and zap your gums. So I got these because they're enamel safe and they won't hurt your gums. It's been 30 minutes. My gums don't feel a thing. So let's see if these actually work. Oh my. I literally got veneers. What the fuck?! This is the result. My yellow teeth are literally gone. I'm just pissed because right after I bought these boxes, they went on sale. If they didn't sell out already, I'll put the best link for you right here. Just make sure you go fast before they sell out.",
+        "traduction_fr": "Si tes dents sont jaunes comme ça, tu prends juste ça — tu étires, tu colles, et ça, tu étires, tu colles. Ça a l'air un peu fou. Tu dois faire super attention avec les bandes blanchissantes parce qu'elles peuvent abîmer ton émail et attaquer tes gencives. Donc j'ai pris celles-ci parce qu'elles sont safe émail et ne feront pas mal aux gencives. Ça fait 30 minutes, mes gencives ne sentent rien, voyons si elles marchent vraiment. Oh mon dieu. J'ai littéralement des facettes. C'est quoi ça ?! C'est le résultat. Mes dents jaunes ont carrément disparu. Je suis dégoûtée parce que juste après avoir acheté ces boîtes, elles sont passées en promo. Si elles ne sont pas déjà en rupture, je vous mets le meilleur lien ici. Assurez-vous d'aller vite avant qu'elles ne partent.",
+        "hook": "« Si tes dents sont jaunes comme ça » — hook problème/solution direct (0-3s)",
+        "format": "Éducation safety + démo · Focus sur ce qui DIFFÉRENCIE de la concurrence",
+        "cta": "« -43 % de lancement, exclu TikTok Shop — plus que quelques jours ! » — CTA urgence promo",
+        "notes": "⭐⭐ EXCELLENT angle pour Alpine White. Structure gagnante :\n\n1. Douleur : « Les bandes blanchissantes classiques peuvent abîmer l'émail et attaquer les gencives »\n2. Solution : « Alpine White est SANS peroxyde, techno PAP brevetée — safe émail & gencives »\n3. Argument fort : « C'est une CURE DE 7 JOURS — pas un one-shot. Résultat immédiat + durable. »\n4. CTA urgence promo : « Prix de lancement exclu TikTok Shop -43 % (29,90 € → 16,99 €) + bâtonnets interdentaires offerts. L'offre ne durera pas ! »\n\nC'est l'argument #1 d'Alpine White vs la concurrence."
+      },
+      "5": {
+        "brand": "Duo mère × fille · storytelling",
+        "original": "Oh my god. I didn't even, I didn't, I never noticed that. I smoked too much. Yeah, you should quit smoking. Alright, try this. Alright, now it says to wait for 30 minutes, so we'll be back. Alright, I think it's been like 30 minutes. Bruh. Aw. So cute. I feel bad waking her up. Mom. What? Your teeth. Can you see? Oh. What it looks like. Oh my god, mom. What the fuck? I don't think you understand. It is? Come look at it in the mirror. Alright. Oh my god. Wow. Oh my god. I had to do all of this. Wow. Alright, my mom is brushing her teeth because apparently people said it doesn't work after you brush your teeth. So, we'll see if that's true. My door is broken. I fixed it. I know. I pulled it off the hinges again. Let me see. Look at this. Oh, Shima. You need to do your bottom ones so they match though. I know. Wait, smile. Let me see. Damn, mom. I know.",
+        "traduction_fr": "Oh mon dieu. J'avais pas remarqué, jamais remarqué. J'ai trop fumé. Ouais, tu devrais arrêter de fumer. OK, essaie ça. OK, il dit qu'il faut attendre 30 minutes, on revient. OK je crois que ça fait 30 minutes. Bruh. Aw, trop mignonne. J'ai la flemme de la réveiller. Maman. Quoi ? Tes dents. Tu vois ? Oh. À quoi ça ressemble. Oh mon dieu, maman. C'est quoi ce truc ?! Je ne pense pas que tu comprennes. C'est ça ? Viens regarder dans le miroir. OK. Oh mon dieu. Wow. Oh mon dieu. J'ai dû faire tout ça. Wow. OK, ma mère se brosse les dents parce qu'apparemment les gens disent que ça ne marche pas si tu te brosses les dents après. Donc on va voir si c'est vrai. Ma porte est cassée. Je l'ai réparée. Je sais. Je l'ai encore dégondée. Fais voir. Regarde ça. Oh, Shima. Il faut que tu fasses celles du bas aussi pour que ça matche. Je sais. Attends, souris. Fais voir. Damn, maman. Je sais.",
+        "hook": "« Oh mon dieu j'avais jamais remarqué — t'as trop fumé ! » — hook drôle / relatable (0-4s)",
+        "format": "Duo mère × fille · Storytelling humoristique + reveal partagé",
+        "cta": "Aucun CTA direct — le duo authentique vend seul",
+        "notes": "Format duo = engagement X10. La dynamique mère/fille est TikTok gold. Pour Alpine White : fais le test AVEC ta mère/sœur, montrez les 2 sourires avant/après.\n\n• Marque suisse, cabinet dentaire à Zurich, co-développée avec des dentistes\n• C'est une CURE DE 7 JOURS — pas un one-shot\n• Résultat immédiat + durable sur toute la cure"
+      },
+      "6": {
+        "brand": "Créatrice · haul + tutorial · dévoile son secret",
+        "original": "Oh, look at my teeth. You guys always ask me what I do to get my teeth so white. Just got a new pack in the mail today, so I'm gonna show you guys realistically what I do to get my teeth super white, and I'm gonna show you on camera. Okay, I think my teeth is a four. Yeah. Okay, so my teeth is a four. We're gonna check back when I finish doing this. It comes with 42 syrups, baby. Plenty. They smell so minty. I cut them in half so it just is better, trust me, I cut them in half so I'm only using one strip at a time. Okay, stretch, and then stick. Okay, I look kinda cool. And now, instead of just 42, I actually have 84. Now we wait. Alexa, set a 30-minute timer. 30-minute timer started. Okay, as you can hear, my timer's going off. Alexa, cancel timer. We're just gonna remove. Let's just do the top first, because I just took it off. Oh my gosh. That is like — are y'all seeing this? Okay, let's do — let's take the bottoms off now. I have to go — okay. Oh, let's go brush my teeth. Look at that. Let's see what color we are now. Easily! Easily a two. Easily. So y'all can see. Y'all can see for yourself. Y'all can see for yourself. Go buy the cart — I'm gonna have it right here. If you want white teeth, it's that simple.",
+        "traduction_fr": "Oh, regardez mes dents. Vous me demandez toujours ce que je fais pour avoir les dents si blanches. Je viens de recevoir un nouveau pack aujourd'hui, donc je vais vous montrer réellement ce que je fais pour avoir les dents super blanches, en direct devant la caméra. OK, je pense que mes dents sont au niveau 4. Ouais. OK donc mes dents sont au 4, on revérifie à la fin. Il y a 42 sachets bébé, énormément. Ils sentent super la menthe. Je les coupe en deux, c'est juste mieux — croyez-moi je les coupe en deux, donc j'utilise une demi-bande à la fois. OK, étire, et colle. OK, ça a l'air cool. Et au lieu de 42, j'en ai maintenant 84. Maintenant on attend. Alexa, mets un timer de 30 minutes. Timer 30 minutes lancé. OK, comme vous entendez, mon timer sonne. Alexa, cancel timer. On enlève. On fait le haut d'abord parce que je viens de l'enlever. Oh mon dieu. C'est trop — vous voyez ça ?! OK, on enlève le bas maintenant. Je dois aller — OK. Oh, je vais me brosser les dents. Regardez ça. Voyons quelle couleur on a maintenant. Facile ! Facile un 2. Facile. Vous voyez. Vous pouvez voir par vous-mêmes. Allez acheter le pack, je le mets ici. Si vous voulez les dents blanches, c'est aussi simple.",
+        "hook": "Hook visuel : gros plan sur les dents blanches — la créatrice « dévoile son secret » (0-3s)",
+        "format": "Haul + tutorial · Long format · À raccourcir à 1 min 30 max en accélérant les parties d'application et d'attente",
+        "cta": "« Le lien est en bas si vous voulez essayer »",
+        "notes": "Format LONG hyper convertisseur quand tu as déjà une audience qui te demande « quel produit tu utilises ? ». Structure pour Alpine White :\n\n1. Hook visuel : « Vous me demandez toujours mon secret pour avoir les dents si blanches »\n2. Reveal pack Alpine White\n3. Application accélérée (fast-forward)\n4. Temps de pose Alpine White = 1 HEURE (pas 30 min comme d'autres marques)\n5. Reveal du résultat\n6. CTA lien en bas\n\n⚠️ VIDÉO À RACCOURCIR : max 1 min 30. Accélère les parties d'application et d'attente pour garder la rétention.\n⚠️ NE COUPE PAS les bandes en deux — pour Alpine White respecte le protocole : 14 bandes = cure complète de 7 jours."
+      }
+    };
 
-<footer>Alpine White · TikTok Shop France — Sesame</footer>
+    document.querySelectorAll('.biblio-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const n = card.dataset.vid;
+        const d = window.__LIB_DATA__[n];
+        if (!d) return;
+        document.getElementById('lib-num').textContent = '#' + n;
+        document.getElementById('lib-brand').textContent = d.brand;
+        document.getElementById('lib-title').textContent = d.brand;
+        document.getElementById('lib-hook').textContent = d.hook;
+        document.getElementById('lib-format').textContent = d.format;
+        document.getElementById('lib-cta').textContent = d.cta;
+        document.getElementById('lib-orig').textContent = d.original;
+        document.getElementById('lib-fr').textContent = d.traduction_fr;
+        document.getElementById('lib-notes').textContent = d.notes;
+        const vid = document.getElementById('lib-modal-video');
+        vid.src = 'lib' + n + '.mp4';
+        vid.load();
+        document.getElementById('lib-modal').style.display = 'block';
+        document.body.style.overflow = 'hidden';
+      });
+    });
+    function closeLibModal() {
+      const vid = document.getElementById('lib-modal-video');
+      vid.pause();
+      vid.src = '';
+      document.getElementById('lib-modal').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    document.getElementById('lib-modal').addEventListener('click', e => {
+      if (e.target.id === 'lib-modal') closeLibModal();
+    });
+  </script>
+
+  <footer class="footer">
+    Alpine White × Sesame · Programme affiliés TikTok Shop France
+  </footer>
 
 </body>
 </html>
